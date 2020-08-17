@@ -10,17 +10,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Yoann Abran, Kevin Nguma, Emma Léger">
-    <title>Jeux vidéos</title>
   <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="sucess">
     <h1>Bienvenue <?php echo $_SESSION['user']; ?>!</h1>
-    <p>C'est votre espace utilisateur.</p>
+    <p>C'est votre espace admin.</p>
+    <a href="add_user.php">Add user</a> |
+    <a href="#">Update user</a> |
+    <a href="#">Delete user</a> |
     <a href="logout.php">Déconnexion</a>
+    </ul>
     </div>
   </body>
 </html>

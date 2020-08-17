@@ -9,19 +9,22 @@ require('config.php');
 session_start();
 
 if (isset($_POST['user'])){
-  $username = stripslashes($_REQUEST['user']);
-  $username = mysqli_real_escape_string($conn, $username);
+  $user = stripslashes($_REQUEST['user']);
+  $_SESSION['user'] = $user;
   $password = stripslashes($_REQUEST['password']);
-  $password = mysqli_real_escape_string($conn, $password);
-    $query = "SELECT * FROM `admin` WHERE user='$username' and password='".hash('sha256', $password)."'";
-  $result = mysqli_query($conn,$query) or die(mysql_error());
-  $rows = mysqli_num_rows($result);
-  if($rows==1){
-      $_SESSION['user'] = $username;
-      header("Location: index.php");
-  }else{
+    $query = $db->prepare("SELECT * FROM `admin` WHERE user='$user' and password='".password_hash($password, PASSWORD_DEFAULT)."'");
+    $query->execute();
+
+    $usertypes = $query->fetchAll();
+    // vérifier si l'utilisateur est un administrateur ou un utilisateur
+    foreach ($usertypes as $usertype) {
+    }
+    if ($usertype['type'] == 'admin') {
+      header('location: home.php');
+    }else{
+      header('location: index.php');
+    }
     $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
-  }
 }
 ?>
 <form class="box" action="" method="post" name="login">
