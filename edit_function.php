@@ -4,17 +4,17 @@ include "config.php";
 
 // $id = $_GET['id'];
 if (isset($_POST['submit'])) {
-  $titre = $_POST['titre'];
+  $nom = $_POST['nom'];
   $description = $_POST['description'];
-  $genre = $_POST['genre'];
-  $date = $_POST['date'];
+  $type = $_POST['type'];
+  $taux_alcool = $_POST['taux_alcool'];
   $prix = $_POST['prix'];
-  $developpeur = $_POST['developpeur'];
-  $telechargement = $_POST['telechargement'];
+  $origine = $_POST['origine'];
+  $note = $_POST['note'];
   $image = $_POST['image'];
 
 try {
-$stmt = $conn->prepare("UPDATE jeux_video SET titre = :titre, description = :description, genre = :genre, date = :date, prix = :prix, developpeur = :developpeur, telechargement = :telechargement, image = :image WHERE id = 1");
+$stmt = $conn->prepare("UPDATE alcool SET nom = :nom, description = :description, type = :type, taux_alcool = :taux_alcool, prix = :prix, origine = :origine, note = :note, image = :image WHERE id = 1");
 
 if (!empty($_FILES['new_image']['name'])){
 $filename = $_FILES['new_image']['name'];
@@ -30,13 +30,13 @@ $filename = $_FILES['new_image']['name'];
           }
 
 $stmt->execute(array(
-  ':titre'=>$titre,
+  ':nom'=>$nom,
   ':description'=>$description,
-  ':genre'=>$genre,
-  ':date'=>$date,
+  ':type'=>$type,
+  ':taux_alcool'=>$taux_alcool,
   ':prix'=>$prix,
-  ':developpeur'=>$developpeur,
-  ':telechargement'=>$telechargement,
+  ':origine'=>$origine,
+  ':note'=>$note,
   ':image'=>$target_files,
 ));
 }
@@ -48,8 +48,8 @@ catch(PDOException $e) {
 
 
 try {
-$sql = $conn->prepare("SELECT titre, description, genre, date, prix, developpeur, telechargement, image
-                        FROM jeux_video
+$sql = $conn->prepare("SELECT nom, description, type, taux_alcool, prix, origine, note, image
+                        FROM alcool
                          WHERE id = 1
                         ");
 $sql->execute();
