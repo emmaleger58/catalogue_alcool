@@ -12,20 +12,31 @@ if (isset($_POST['user'])){
   $user = stripslashes($_REQUEST['user']);
   $_SESSION['user'] = $user;
   $password = stripslashes($_REQUEST['password']);
-    $query = $db->prepare("SELECT * FROM `admin` WHERE user='$user' and password='".password_hash($password, PASSWORD_DEFAULT)."'");
+    $query = $db->prepare("SELECT * FROM `admin` WHERE user='$user'");
     $query->execute();
 
     $usertypes = $query->fetchAll();
     // vérifier si l'utilisateur est un administrateur ou un utilisateur
     foreach ($usertypes as $usertype) {
     }
-    if ($usertype['type'] == 'admin') {
-      header('location: home.php');
-    }else{
-      header('location: index.php');
-    }
-    $message = "Le nom d'utilisateur ou le mot de passe est incorrect.";
+
+
+        if (password_verify($password, $usertype['password'])) {
+        echo 'Le mot de passe est valide !';
+        if ($usertype['type'] == 'admin') {
+          header('location: home.php');
+        }else{
+          header('location: index.php');
+        }
+    } else {
+        echo 'Le mot de passe est invalide.';
+      }
+
+
+
 }
+
+
 ?>
 <form class="box" action="" method="post" name="login">
 <h1 class="box-title">Connexion</h1>
