@@ -17,7 +17,7 @@ if (isset($_REQUEST['user'], $_REQUEST['email'], $_REQUEST['password'])){
   $stmt->execute();
 
 if($stmt->rowCount() > 0) {
-    echo "try again";
+    echo "Le nom d'utilisateur ou l'adresse mail est déjà utilisé.";
   } else {  //requête SQL + mot de passe crypté
       $query = $db->prepare("INSERT into `admin` (user, email, type, password)
                 VALUES (:user, :email, :type, :password)");
