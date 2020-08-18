@@ -13,19 +13,25 @@ if (isset($_REQUEST['user'], $_REQUEST['email'], $_REQUEST['password'])){
   $email = stripslashes($_REQUEST['email']);
   // récupérer le mot de passe et supprimer les antislashes ajoutés par le formulaire
   $password = stripslashes($_REQUEST['password']);
-  //requéte SQL + mot de passe crypté
-    $query = $db->prepare("INSERT into `admin` (user, email, type, password)
-              VALUES (:user, :email, :type, :password)");
-    $query->execute(array(
-      ':user' => $user,
-      ':email' => $email,
-      ':type' => 'user',
-      ':password'=> password_hash($password, PASSWORD_DEFAULT),
-    ));
-       echo "<div class='sucess'>
+  $stmt = $db->prepare("SELECT user, email from admin");
+  $stmt->execute();
+
+if($stmt->rowCount() > 0) {
+    echo "try again";
+  } else {  //requête SQL + mot de passe crypté
+      $query = $db->prepare("INSERT into `admin` (user, email, type, password)
+                VALUES (:user, :email, :type, :password)");
+      $query->execute(array(
+        ':user' => $user,
+        ':email' => $email,
+        ':type' => 'user',
+        ':password'=> password_hash($password, PASSWORD_DEFAULT),
+      ));
+      echo "<div class='sucess'>
              <h3>Vous êtes inscrit avec succès.</h3>
              <p>Cliquez ici pour vous <a href='login.php'>connecter</a></p>
        </div>";
+     }
 }
 ?>
 <form class="box" action="" method="post">
