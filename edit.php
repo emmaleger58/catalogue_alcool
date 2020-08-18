@@ -1,7 +1,5 @@
 <?php
-
   include "edit_function.php";
-
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -10,8 +8,6 @@
   <meta charset="utf-8">
   <meta name="author" content="Yoann Abran">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio</title>
-
   <link rel="stylesheet" href="main.css">
 
 </head>

@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
   $image = $_POST['image'];
 
 try {
-$stmt = $conn->prepare("UPDATE alcool SET nom = :nom, description = :description, type = :type, taux_alcool = :taux_alcool, prix = :prix, origine = :origine, note = :note, image = :image WHERE id = 1");
+$stmt = $conn->prepare("UPDATE alcool SET nom = :nom, description = :description, type = :type, taux_alcool = :taux_alcool, prix = :prix, origine = :origine, note = :note, image = :image WHERE id = 4");
 
 if (!empty($_FILES['new_image']['name'])){
   $filename = $_FILES['new_image']['name'];
@@ -53,7 +53,7 @@ catch(PDOException $e) {
 try {
   $sql = $conn->prepare("SELECT nom, description, type, taux_alcool, prix, origine, note, image
                         FROM alcool
-                         WHERE id = 1
+                         WHERE id = 4
                         ");
         $sql->execute();
         $texts = $sql->fetchAll();
