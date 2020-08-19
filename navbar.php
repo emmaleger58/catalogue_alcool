@@ -6,8 +6,7 @@
 
   <div class="area"></div>
   <nav class="main-menu ">
-    <div id="logo" class="">
-
+    <div id="logo" class="mt-4">
     </div>
       <ul class="logonav">
         <li id="navbg1">

@@ -64,16 +64,15 @@ include "config.php";
 				if($resultats->rowCount()>0){
 					while($d=$resultats->fetch(PDO::FETCH_ASSOC)){
 
-            echo "<a href='single.php?id=".$d['id']."' class=''>
-                    <div class=' heightcard col mb-4'>";
+            echo "<div class=' blurred-box col mb-4 px-3'>
+                    <a href='single.php?id=".$d['id']."' class=''>
+                    ";
                   echo "<div class='card' >";
                     echo "<h5 class='card-title text-center p-2'>".$d['nom']."</h5>";
                        echo "<img src='".$d['image']."' class='card-img-top' alt='...'>";
-            // echo "<div class='card-body d-flex flex-column justify-content-between'>";
-            // echo "<a href='single.php?id=".$row['id']."' class='btn'>GO !!</a>";
                echo "</div>
-                  </div>
-                </a>";
+                    </a>
+                  </div>";
 
 					}
 					$resultats->closeCursor();
