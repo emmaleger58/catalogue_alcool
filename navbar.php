@@ -1,6 +1,9 @@
 
 
 <body>
+  <div class="stickynav">
+
+
   <div class="area"></div>
   <nav class="main-menu ">
     <div id="logo" class="">
@@ -19,7 +22,7 @@
             <a href="#">
               <i class="fa fas fa-wine-glass-alt fa-2x"></i>
                 <span class="nav-text">
-                    Articles
+                    Nos bières
                 </span>
             </a>
           </li>
@@ -27,7 +30,7 @@
                 <a href="#">
                     <i class="fa fas fa-cocktail fa-2x"></i>
                     <span class="nav-text">
-                      Archives
+                    À propos
                     </span>
                 </a>
             </li>
@@ -35,7 +38,7 @@
                 <a href="#">
                       <i class="fa fas fa-glass-cheers fa-2x"></i>
                       <span class="nav-text">
-                          Portfolio
+                          Contact
                         </span>
                       </a>
               </li>
@@ -43,7 +46,15 @@
         <ul class="logout">
           <li>
             <a href="#">
-              <i class="fa fa-power-off fa-2x"></i>
+              <i class="fa fas fa-sign-in-alt fa-1x"></i>
+                <span class="nav-text">
+                    Login
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa fas fa-sign-out-alt fa-1x"></i>
                 <span class="nav-text">
                     Logout
                 </span>
@@ -51,5 +62,6 @@
           </li>
         </ul>
   </nav>
+  </div>
 </body>
 </html>

@@ -12,13 +12,25 @@
   color: white;
 }
 .card{
-  background-color: #26262680;
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color : black;
+}
+.card-title{
+  font-weight: bolder;
+  font-size: 30px;
+}
+body{
+  background-color: grey;
+}
+.sectioncard{
+}
+.filterDiv {
+  display: none; /* Hidden by default */
 }
 
-/* .heightcard{
-  max-height: 347.5px;
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
 }
-.heightcard img{
-   height:10%; 
-  width: 25%;
-} */
