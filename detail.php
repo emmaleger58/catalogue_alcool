@@ -12,30 +12,29 @@
   </head>
   <body>
     <div class="vertical">
+      <div class="title">
 
+<?php
+      $stmt = $db->prepare("SELECT titre FROM jeux_video ORDER BY Id DESC");
+      $stmt->execute();
+      $catalogue = $stmt->fetchAll();
+      foreach ($catalogue as $row) {
+        echo $row['titre'] . '<br>';
+      }
+
+?>
+
+</div>
     <div class="space">
       <?php
       $stmt = $db->prepare('SELECT image FROM jeux_video ORDER BY Id DESC');
       $stmt->execute();
       $catalogue = $stmt->fetchAll();
       foreach ($catalogue as $row) {
-        echo "<img src='".$row['image']."'";
+        echo "<img src='".$row['image']."' <br>";
       }
-    ?>
 
-    <div class="title">
-      <?php
-      $stmt = $db->prepare("SELECT titre FROM jeux_video ORDER BY Id DESC");
-      $stmt->execute();
-      $catalogue = $stmt->fetchAll();
-      foreach ($catalogue as $row) {
-        echo $row['titre'];
-      }
-       ?>
-    </div>
 
-    <div class="">
-      <?php
       $stmt = $db->prepare("SELECT * FROM jeux_video ORDER BY Id DESC");
       $stmt->execute();
       $catalogue = $stmt->fetchAll();
@@ -45,17 +44,12 @@
         echo $row['prix'] . '€<br>';
         echo $row['developpeur'] . '<br>';
       }
-       ?>
-    </div>
-  </div>
 
-    <div class="space">
-      <?php
       $stmt = $db->prepare("SELECT description FROM jeux_video ORDER BY Id DESC");
       $stmt->execute();
       $catalogue = $stmt->fetchAll();
       foreach ($catalogue as $row) {
-        echo $row['description'];
+        echo '<br>' . $row['description'] . '<br>';
       }
        ?>
     </div>
