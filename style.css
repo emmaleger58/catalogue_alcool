@@ -1,0 +1,14 @@
+/* DETAIL */
+.vertical{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100vh;
+}
+
+
+.space{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
