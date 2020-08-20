@@ -1,5 +1,5 @@
-<?php include 'config.php';
-$_GET['id'];
+<?php include 'config_admin.php';
+// $_GET['id'];
  ?>
 
 <!DOCTYPE html>
@@ -28,20 +28,20 @@ $_GET['id'];
 
 </div>
     <div class="space">
-      <div class="col-6 center">
+      <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-12 center">
 
       <?php
       $stmt = $db->prepare('SELECT image FROM jeux_video ORDER BY Id DESC');
       $stmt->execute();
       $catalogue = $stmt->fetchAll();
       foreach ($catalogue as $row) {
-        echo "<img src='".$row['image']."' <br>";
+        echo "<img class ='img-fluid' src='".$row['image']."' <br>";
       }
 
 ?>
 </div>
 
-<div class="col-6">
+<div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-12">
   <?php
       $stmt = $db->prepare("SELECT * FROM jeux_video ORDER BY Id DESC");
       $stmt->execute();

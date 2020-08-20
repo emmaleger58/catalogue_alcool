@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="admin.css" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 <body>
 <?php
-require('config.php');
+require('config_admin.php');
 if (isset($_REQUEST['user'], $_REQUEST['email'], $_REQUEST['password'])){
   // récupérer le nom d'utilisateur et supprimer les antislashes ajoutés par le formulaire
   $user = stripslashes($_REQUEST['user']);
@@ -16,8 +16,8 @@ if (isset($_REQUEST['user'], $_REQUEST['email'], $_REQUEST['password'])){
   $password = stripslashes($_REQUEST['password']);
 
 
-$stmt = $db->prepare("SELECT * FROM admin WHERE email=?");
-$stmt->execute([$email]);
+$stmt = $db->prepare("SELECT * FROM admin WHERE user=?");
+$stmt->execute([$user]);
 $users = $stmt->fetch();
 if ($users) {
 
@@ -40,10 +40,15 @@ if ($users) {
 ?>
 <form class="box" action="" method="post">
     <h1 class="box-title">S'inscrire</h1>
+    <div class="m-4">
+
   <input type="text" class="box-input" name="user" placeholder="Nom d'utilisateur" required />
     <input type="text" class="box-input" name="email" placeholder="Email" required />
     <input type="password" class="box-input" name="password" placeholder="Mot de passe" required />
+
     <input type="submit" name="submit" value="S'inscrire" class="box-button" />
+
+  </div>
     <p class="box-register">Déjà inscrit ? <a href="login.php">Connectez-vous ici</a></p>
 </form>
 

@@ -1,5 +1,5 @@
 <?php
-include_once 'connect.php';
+include_once 'config_admin.php';
 
   if(isset($_POST['add'])) {
     $nom = $_POST['nom'];
