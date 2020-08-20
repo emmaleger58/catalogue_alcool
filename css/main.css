@@ -1,0 +1,47 @@
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}
+
+.deux{
+  background-color: rgba(0,0,0,0.4);
+  font-size: 40px;
+  color: white;
+}
+.card{
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  color : black;
+}
+.card-title{
+  font-weight: bolder;
+  font-size: 30px;
+}
+body{
+  height: 100vh;
+  background: grey;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.blurred-box-card{
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    background-color: rgba(247, 234, 168, .1);
+    backdrop-filter: blur(5px);
+    max-width : 250px;
+}
+.blurred-box{
+
+    top: 15%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    background-color: rgba(247, 234, 168, .1);
+    backdrop-filter: blur(5px);
+
+}
