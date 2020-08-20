@@ -12,7 +12,7 @@
               <source src="imgvid/champs.mp4" type="video/mp4">
             </video>
             <div id='textcontainer'>
-              <p>bla bla bla</p>
+              <p>bla bla blajjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjbkbkbkbkbkbkkbkb</p>
           </div>
         </div>
       </div>
