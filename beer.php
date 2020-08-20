@@ -4,14 +4,14 @@ include "navbar.php";
 include "config.php";
 
   try {
-    $tri = $conn->prepare("SELECT type
+    $tri = $db->prepare("SELECT type
                           FROM alcool
                           GROUP BY type");
           $tri->execute();
           $types = $tri->fetchAll();
   }
     catch(PDOException $e) {
-      echo "Connection failed: " . $e->getMessage();
+      echo "connection failed: " . $e->getMessage();
     }
     foreach ($types as $type) {
     }
@@ -21,17 +21,17 @@ include "config.php";
     if(isset($_POST['type'])){
       $search.=' WHERE type LIKE :type';
       $params[':type']="%".addcslashes($_POST['type'],'_')."%";
-      $resultats=$conn->prepare($search);
+      $resultats=$db->prepare($search);
       $resultats->execute($params);
     }
    if(isset($_POST['terme'])){
       $search.=' WHERE nom LIKE :nom';
       $params[':nom']="%".addcslashes($_POST['terme'],'_')."%";
-      $resultats=$conn->prepare($search);
+      $resultats=$db->prepare($search);
       $resultats->execute($params);
     }
     else {
-      $resultats=$conn->prepare($search);
+      $resultats=$db->prepare($search);
       $resultats->execute($params);
     }
 

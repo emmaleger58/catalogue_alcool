@@ -14,7 +14,7 @@ if (isset($_POST['submit'])) {
   $image = $_POST['image'];
 
 try {
-$stmt = $conn->prepare("UPDATE alcool SET nom = :nom, description = :description, type = :type, taux_alcool = :taux_alcool, prix = :prix, origine = :origine, note = :note, image = :image WHERE id = 4");
+$stmt = $db->prepare("UPDATE alcool SET nom = :nom, description = :description, type = :type, taux_alcool = :taux_alcool, prix = :prix, origine = :origine, note = :note, image = :image WHERE id = 4");
 
 if (!empty($_FILES['new_image']['name'])){
   $filename = $_FILES['new_image']['name'];
@@ -45,13 +45,13 @@ $stmt->execute(array(
 }
 
 catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
+  echo "connection failed: " . $e->getMessage();
 }
 }
 
 
 try {
-  $sql = $conn->prepare("SELECT nom, description, type, taux_alcool, prix, origine, note, image
+  $sql = $db->prepare("SELECT nom, description, type, taux_alcool, prix, origine, note, image
                         FROM alcool
                          WHERE id = 4
                         ");
@@ -59,7 +59,7 @@ try {
         $texts = $sql->fetchAll();
 }
   catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
+    echo "connection failed: " . $e->getMessage();
   }
 
 foreach ($texts as $text) {

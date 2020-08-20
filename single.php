@@ -7,13 +7,13 @@ include "config.php";
 
 $id = $_GET['id'];
 try {
-$sql = $conn->prepare("SELECT id,nom, description, type, taux_alcool, prix, origine, note, image
+$sql = $db->prepare("SELECT id,nom, description, type, taux_alcool, prix, origine, note, image
                       FROM alcool
                         WHERE id = $id ");
 $sql->execute();
 $rows = $sql->fetchAll();
 } catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
+  echo "connection failed: " . $e->getMessage();
 }
 foreach ($rows as $row) {
 }
