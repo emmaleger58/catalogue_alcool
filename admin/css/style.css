@@ -4,12 +4,12 @@
 }
 
 @font-face {
-  font-family: 'Caslon';
-  src: url('font/Libre_Caslon_Display/LibreCaslonDisplay-Regular.ttf');
+  font-family: 'Lora';
+  src: url('font/Lora/static/Lora-Medium.ttf');
 }
 
 body{
-  background-color: #eddcd2;
+  background-image: url(images/marble.jpg);
 }
 
 
@@ -35,7 +35,8 @@ body{
   justify-content: center;
   align-items: center;
   font-size: 4vh;
-  font-family: 'Caslon';
+  font-weight: 500;
+  font-family: 'Lora';
 }
 
 

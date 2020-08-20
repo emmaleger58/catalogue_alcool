@@ -13,11 +13,11 @@ include "include/config.php";
       <div class="title">
 
 <?php
-      $stmt = $db->prepare("SELECT titre FROM jeux_video ORDER BY id DESC");
+      $stmt = $db->prepare("SELECT nom FROM alcool ORDER BY id DESC");
       $stmt->execute();
       $catalogue = $stmt->fetchAll();
       foreach ($catalogue as $row) {
-        echo $row['titre'] . '<br>';
+        echo $row['nom'] . '<br>';
       }
 
 ?>
@@ -27,7 +27,7 @@ include "include/config.php";
       <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-12 center">
 
       <?php
-      $stmt = $db->prepare('SELECT image FROM jeux_video ORDER BY Id DESC');
+      $stmt = $db->prepare('SELECT image FROM alcool ORDER BY id DESC');
       $stmt->execute();
       $catalogue = $stmt->fetchAll();
       foreach ($catalogue as $row) {
@@ -39,19 +39,18 @@ include "include/config.php";
 
 <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-12">
   <?php
-      $stmt = $db->prepare("SELECT * FROM jeux_video ORDER BY Id DESC");
+      $stmt = $db->prepare("SELECT * FROM alcool ORDER BY id DESC");
       $stmt->execute();
       $catalogue = $stmt->fetchAll();
       foreach ($catalogue as $row) {
-        echo 'Robe : ' . $row['genre'] . '<br>';
-        echo 'Pays : ' . $row['date'] . '<br>';
+        echo 'Robe : ' . $row['type'] . '<br>';
+        echo 'Taux d\'alcool : ' . $row['taux_alcool'] . '%<br>';
+        echo 'Origine : ' . $row['origine'] . '<br>';
         echo 'Prix : ' . $row['prix'] . '€<br>';
-        echo 'Provenance : ' . $row['developpeur'] . '<br>';
-        // echo 'Note : ' . $row[''] . '<br>';
-        // echo 'Jsp : ' . $row[''] . '<br>';
+        echo 'Note : ' . $row['note'] . '/5<br>';
       }
 
-      $stmt = $db->prepare("SELECT description FROM jeux_video ORDER BY Id DESC");
+      $stmt = $db->prepare("SELECT description FROM alcool ORDER BY id DESC");
       $stmt->execute();
       $catalogue = $stmt->fetchAll();
       foreach ($catalogue as $row) {
