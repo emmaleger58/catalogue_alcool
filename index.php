@@ -42,25 +42,31 @@ include "config.php";
   <source src="img/BGbeer.mp4" type="video/mp4">
 </video>
 
-<div class="tri blurred-box container py-4 ">
-  <div class="search-bar container align-self-end">
-    <form action = "" method = "POST">
-     <input type = "search" name = "terme" placeholder="Search...">
-        <div class="search"></div>
-   </form>
+<div class="tri blurred-box container py-4 d-flex justify-content-around ">
+  <div class="search-contain container cols">
+    <div class="search-bar ">
+      <form action = "" method = "POST">
+       <input type = "search" name = "terme" placeholder="Search...">
+          <div class="search"></div>
+     </form>
+    </div>
   </div>
 
-<div class="">
-  <form class="" action="" method="post">
-    <select class="" name="type">
-      <option value=''>type de bières</option>
-        <?php
-        foreach ($types as $type) {
-            echo "<option value='".$type["type"]."'>".$type["type"]."</option>";
-        }
-          ?>
+<form class="form-group" action="" method="post">
+<div class=" container d-flex p-2 cols">
+    <div class="">
+      <select class="form-control" name="type">
+        <option value=''>toutes les bières</option>
+          <?php
+          foreach ($types as $type) {
+              echo "<option value='".$type["type"]."'>".$type["type"]."</option>";
+          }
+            ?>
+      </select>
+    </div>
+    <div class="p-2">
       <input type="submit" name="submit" value="choose">
-    </select>
+    </div>
   </form>
 </div>
 </div>
