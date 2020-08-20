@@ -42,8 +42,8 @@ include "config.php";
   <source src="img/BGbeer.mp4" type="video/mp4">
 </video>
 
-<div class="tri blurred-box container py-4 d-flex justify-content-around ">
-  <div class="search-contain container cols">
+<div class="tri blurred-box container py-4 d-flex justify-content-between ">
+  <div class="search-contain container d-flex justify-content-center ">
     <div class="search-bar ">
       <form action = "" method = "POST">
        <input type = "search" name = "terme" placeholder="Search...">
@@ -51,24 +51,26 @@ include "config.php";
      </form>
     </div>
   </div>
-
-<form class="form-group" action="" method="post">
-<div class=" container d-flex p-2 cols">
-    <div class="">
-      <select class="form-control" name="type">
-        <option value=''>toutes les bières</option>
-          <?php
-          foreach ($types as $type) {
-              echo "<option value='".$type["type"]."'>".$type["type"]."</option>";
-          }
-            ?>
-      </select>
-    </div>
-    <div class="p-2">
-      <input type="submit" name="submit" value="choose">
-    </div>
-  </form>
+<div class=" container d-flex justify-content-center align-items-center ">
+  <form class="form-group" action="" method="post">
+  <div class=" container d-flex align-items-center">
+      <div class="">
+        <select class="form-control" name="type">
+          <option value=''>toutes les bières</option>
+            <?php
+            foreach ($types as $type) {
+                echo "<option value='".$type["type"]."'>".$type["type"]."</option>";
+            }
+              ?>
+        </select>
+      </div>
+      <div class="p-2">
+        <input class="btn btn-warning" type="submit" name="submit" value="GO!!">
+      </div>
+    </form>
+  </div>
 </div>
+
 </div>
 <div class="sectioncard container d-flex flex-column align-items-center pt-5">
 <div class=" container card-deck row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 d-flex justify-content-center " >

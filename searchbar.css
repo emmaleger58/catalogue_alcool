@@ -13,8 +13,8 @@
 	 left: 0;
 	 right: 0;
 	 bottom: 0;
-	 width: 300px;
-	 height: 100px;
+	 /* width: 300px;
+	 height: 100px; */
 }
  .search-bar .search {
 	 position: absolute;
