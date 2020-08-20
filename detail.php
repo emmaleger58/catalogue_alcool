@@ -1,4 +1,4 @@
-<?php include 'config_admin.php';
+<?php include 'config.php';
 // $_GET['id'];
  ?>
 

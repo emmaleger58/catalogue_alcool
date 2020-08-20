@@ -9,10 +9,10 @@
   <body>
 
     <?php
-include_once 'connect.php';
+include_once 'config.php';
 
   $sql = "SELECT * FROM `alcool` WHERE 1";
-    foreach ($conn -> query($sql) as $row) {
+    foreach ($db -> query($sql) as $row) {
       echo $row['nom'] . " " . $row['type'] . " " . $row['taux_alcool'] . " " .  $row['prix'] . " " . $row['origine'] . " " . $row['note'] . " " . $row['description'] . " " . $row['image'] . '<br>';
 }
 echo "<br>" . "<br>";

@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-require('config_admin.php');
+require('config.php');
 if (isset($_REQUEST['user'], $_REQUEST['email'], $_REQUEST['password'])){
   // récupérer le nom d'utilisateur et supprimer les antislashes ajoutés par le formulaire
   $user = stripslashes($_REQUEST['user']);

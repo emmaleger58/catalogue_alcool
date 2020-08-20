@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-require('config_admin.php');
+require('config.php');
 
 if (isset($_REQUEST['user'], $_REQUEST['email'], $_REQUEST['type'], $_REQUEST['password'])){
   // récupérer le nom d'utilisateur

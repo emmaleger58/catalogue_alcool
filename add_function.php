@@ -1,5 +1,5 @@
 <?php
-include_once 'connect.php';
+include_once 'config.php';
 
   if(isset($_POST['add'])) {
     $nom = $_POST['nom'];
@@ -17,7 +17,7 @@ include_once 'connect.php';
   else{
 
     try{
-      $stmt =$conn->prepare("INSERT INTO alcool (nom, type, description, taux_alcool, prix, origine, note, image) VALUES (:nom, :type, :description, :taux_alcool, :prix, :origine, :note, :image)");
+      $stmt =$db->prepare("INSERT INTO alcool (nom, type, description, taux_alcool, prix, origine, note, image) VALUES (:nom, :type, :description, :taux_alcool, :prix, :origine, :note, :image)");
 
       $filename = $_FILES['image']['name'];
                   $target_files='img/' .$filename;
