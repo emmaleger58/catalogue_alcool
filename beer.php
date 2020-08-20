@@ -1,7 +1,7 @@
 <?php
-include "head.php";
-include "navbar.php";
-include "config.php";
+include "include/head.php";
+include "include/navbar.php";
+include "include/config.php";
 
   try {
     $tri = $db->prepare("SELECT type
@@ -36,7 +36,9 @@ include "config.php";
     }
 
 ?>
-<html>
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/searchbar.css">
+</head>
 <body>
 <video autoplay muted loop id="myVideo">
   <source src="img/BGbeer.mp4" type="video/mp4">
@@ -79,7 +81,7 @@ include "config.php";
 					while($d=$resultats->fetch(PDO::FETCH_ASSOC)){
 
             echo "<div class=' blurred-box-card col mb-4 mx-2'>
-                    <a href='single.php?id=".$d['id']."' class=''>
+                    <a href='detail.php?id=".$d['id']."' class=''>
                     ";
                   echo "<div class='card' >";
                     echo "<h5 class='card-title text-center p-2'>".$d['nom']."</h5>";

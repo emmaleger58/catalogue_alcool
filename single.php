@@ -1,8 +1,8 @@
-<?php
+include/<?php
 
-include "head.php";
-include "navbar.php";
-include "config.php";
+include "include/head.php";
+include "include/navbar.php";
+include "include/config.php";
 
 
 $id = $_GET['id'];
