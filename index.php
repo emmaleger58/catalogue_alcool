@@ -30,6 +30,10 @@ include "config.php";
       $resultats=$conn->prepare($search);
       $resultats->execute($params);
     }
+    else {
+      $resultats=$conn->prepare($search);
+      $resultats->execute($params);
+    }
 
 ?>
 
@@ -38,16 +42,18 @@ include "config.php";
   <source src="img/BGbeer.mp4" type="video/mp4">
 </video>
 
-<div class="tri container py-5">
-  <form action = "" method = "POST">
-   <input type = "search" name = "terme">
-   <input type = "submit" name = "submit" value = "Rechercher">
- </form>
-</div>
-<div class="container">
+<div class="tri blurred-box container py-4 ">
+  <div class="search-bar container align-self-end">
+    <form action = "" method = "POST">
+     <input type = "search" name = "terme" placeholder="Search...">
+        <div class="search"></div>
+   </form>
+  </div>
+
+<div class="">
   <form class="" action="" method="post">
     <select class="" name="type">
-      <option value=''>--Please choose an option--</option>
+      <option value=''>type de bières</option>
         <?php
         foreach ($types as $type) {
             echo "<option value='".$type["type"]."'>".$type["type"]."</option>";
@@ -56,20 +62,20 @@ include "config.php";
       <input type="submit" name="submit" value="choose">
     </select>
   </form>
-
+</div>
 </div>
 <div class="sectioncard container d-flex flex-column align-items-center pt-5">
-<div class=" container card-deck row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 " >
+<div class=" container card-deck row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 d-flex justify-content-center " >
 <?php
 				if($resultats->rowCount()>0){
 					while($d=$resultats->fetch(PDO::FETCH_ASSOC)){
 
-            echo "<div class=' blurred-box col mb-4 px-3'>
+            echo "<div class=' blurred-box-card col mb-4 mx-2'>
                     <a href='single.php?id=".$d['id']."' class=''>
                     ";
                   echo "<div class='card' >";
                     echo "<h5 class='card-title text-center p-2'>".$d['nom']."</h5>";
-                       echo "<img src='".$d['image']."' class='card-img-top' alt='...'>";
+                       echo "<img src='".$d['image']."' class='card-img-top p-1' alt='...'>";
                echo "</div>
                     </a>
                   </div>";
