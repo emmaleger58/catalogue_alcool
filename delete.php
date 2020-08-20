@@ -1,5 +1,5 @@
 <?php
-include_once 'connect.php';
+include_once 'config.php';
 
   if(isset($_POST['suppress'])) {
     $nom = $_POST['nom'];
@@ -11,7 +11,7 @@ include_once 'connect.php';
   else{
 
     try{
-      $stmt =$conn->prepare("DELETE FROM `alcool` WHERE nom = :nom");
+      $stmt =$db->prepare("DELETE FROM `alcool` WHERE nom = :nom");
       $stmt->execute(array(
         ':nom'=>$nom
         ));

@@ -47,7 +47,7 @@
         <div class="col-md-3 mt-md-0 mt-3">
 
           <!-- Content -->
-          <h5 class="col-md-3 text-uppercase">Contacte</h5>
+          <h5 id='contacte' class="col-md-12 text-uppercase">Contacte</h5>
 
           <div id='info'>
           <ul>
@@ -56,7 +56,7 @@
           <li><div id='phone'><i class="fas fa-tty"></i><p>+214 85 662 43</p></div></li>
 
           <li><div id='mail'><i class="fas fa-envelope"></i><p>brandname@mail.com</p></div></li>
-
+         </ul>
         </div>
         </div>
         <!-- Grid column -->
