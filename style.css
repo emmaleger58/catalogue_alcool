@@ -1,4 +1,19 @@
 /* DETAIL */
+
+@font-face {
+  font-family: 'Rochester';
+  src: url('font/Rochester/Rochester-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Caslon';
+  src: url('font/Libre_Caslon_Display/LibreCaslonDisplay-Regular.ttf');
+}
+
+body{
+  background-color: #eddcd2;
+}
+
 .vertical{
   display: flex;
   flex-direction: column;
@@ -10,13 +25,22 @@
   display: flex;
   justify-content: center;
   font-size: 10vh;
+  font-family: 'Rochester';
 }
 
 .space{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  font-size: 4.5vh;
+  font-size: 4vh;
+  font-family: 'Caslon';
+}
+
+
+.center {
+
+    display: flex;
+    justify-content: center;
 }
 
 @media only screen and (max-width: 420px){

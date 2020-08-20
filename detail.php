@@ -1,4 +1,6 @@
-<?php include 'config.php'; ?>
+<?php include 'config.php';
+$_GET['id'];
+ ?>
 
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -15,7 +17,7 @@
       <div class="title">
 
 <?php
-      $stmt = $db->prepare("SELECT titre FROM jeux_video ORDER BY Id DESC");
+      $stmt = $db->prepare("SELECT titre FROM jeux_video ORDER BY id DESC");
       $stmt->execute();
       $catalogue = $stmt->fetchAll();
       foreach ($catalogue as $row) {
@@ -26,6 +28,8 @@
 
 </div>
     <div class="space">
+      <div class="col-6 center">
+
       <?php
       $stmt = $db->prepare('SELECT image FROM jeux_video ORDER BY Id DESC');
       $stmt->execute();
@@ -34,15 +38,21 @@
         echo "<img src='".$row['image']."' <br>";
       }
 
+?>
+</div>
 
+<div class="col-6">
+  <?php
       $stmt = $db->prepare("SELECT * FROM jeux_video ORDER BY Id DESC");
       $stmt->execute();
       $catalogue = $stmt->fetchAll();
       foreach ($catalogue as $row) {
-        echo $row['genre'] . '<br>';
-        echo $row['date'] . '<br>';
-        echo $row['prix'] . '€<br>';
-        echo $row['developpeur'] . '<br>';
+        echo 'Robe : ' . $row['genre'] . '<br>';
+        echo 'Pays : ' . $row['date'] . '<br>';
+        echo 'Prix : ' . $row['prix'] . '€<br>';
+        echo 'Provenance : ' . $row['developpeur'] . '<br>';
+        // echo 'Note : ' . $row[''] . '<br>';
+        // echo 'Jsp : ' . $row[''] . '<br>';
       }
 
       $stmt = $db->prepare("SELECT description FROM jeux_video ORDER BY Id DESC");
@@ -52,6 +62,8 @@
         echo '<br>' . $row['description'] . '<br>';
       }
        ?>
+     </div>
+
     </div>
 
     </div>
