@@ -1,5 +1,3 @@
-/* DETAIL */
-
 @font-face {
   font-family: 'Rochester';
   src: url('font/Rochester/Rochester-Regular.ttf');
@@ -13,6 +11,10 @@
 body{
   background-color: #eddcd2;
 }
+
+
+
+/* DETAIL */
 
 .vertical{
   display: flex;
@@ -43,10 +45,11 @@ body{
     justify-content: center;
 }
 
-@media only screen and (max-width: 420px){
+@media only screen and (max-width: 767px){
   .vertical{
     height: auto;
   }
+
   .space{
     flex-direction: column;
     margin-top: 2vh;
