@@ -1,6 +1,6 @@
 
 
-<body>
+
   <div class="stickynav">
 
 
@@ -62,5 +62,3 @@
         </ul>
   </nav>
   </div>
-</body>
-</html>
