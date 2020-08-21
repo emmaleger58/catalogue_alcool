@@ -1,4 +1,6 @@
 <?php
+include "admin.php";
+include "navadmin.php";
 include "../include/head.php";
 include_once '../include/config.php';
 

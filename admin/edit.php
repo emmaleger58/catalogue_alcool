@@ -1,4 +1,6 @@
 <?php
+  include "admin.php";
+  include "navadmin.php";
   include "function/edit_function.php";
   include "../include/head.php";
 ?>
