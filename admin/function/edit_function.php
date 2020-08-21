@@ -53,7 +53,7 @@ catch(PDOException $e) {
 try {
   $sql = $db->prepare("SELECT nom, description, type, taux_alcool, prix, origine, note, image
                         FROM alcool
-                         WHERE id = 4
+                         WHERE id = 1
                         ");
         $sql->execute();
         $texts = $sql->fetchAll();

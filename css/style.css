@@ -9,10 +9,10 @@
 }
 
 body{
-  background-image: url(../images/marble.jpg);
+  background-image: url(../images/wood.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-
 
 /* DETAIL */
 
@@ -26,7 +26,7 @@ body{
 .title{
   display: flex;
   justify-content: center;
-  font-size: 10vh;
+  font-size: 12vh;
   font-family: 'Rochester';
 }
 
@@ -34,7 +34,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4vh;
+  font-size: 3.5vh;
   font-weight: 500;
   font-family: 'Lora';
 }
@@ -58,4 +58,32 @@ body{
   img{
     width: 80%;
   }
+}
+
+
+/* INDEX */
+.blurred-box{
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .3);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(5px)
+}
+
+.blurred-box-card{
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .1);
+    backdrop-filter: blur(5px);
+    max-width : 70%;
+}
+
+.middle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.jumbotron{
+  width: 50%;
 }

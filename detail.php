@@ -46,13 +46,13 @@ foreach ($rows as $row) {
 <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-12">
   <?php
 
-        echo 'Robe : ' . $row['type'] . '<br>';
+        echo '<div class="blurred-box-card" Robe : ' . $row['type'] . '<br>';
         echo 'Taux d\'alcool : ' . $row['taux_alcool'] . '%<br>';
         echo 'Origine : ' . $row['origine'] . '<br>';
         echo 'Prix : ' . $row['prix'] . '€<br>';
-        echo 'Note : ' . $row['note'] . '/5<br>';
-      
-        echo '<br>' . $row['description'] . '<br>';
+        echo 'Note : ' . $row['note'] . '/5<br></div>';
+
+        echo '<br><div class="blurred-box-card">' . $row['description'] . '<br> </div>';
 
        ?>
      </div>
