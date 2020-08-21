@@ -3,7 +3,7 @@ include "include/head.php";
 include "include/navbar.php";
 include "include/config.php";
 ;
-// $_GET['id'];
+$_GET['id'];
  ?>
 
 <link rel="stylesheet" href="css/style.css">
