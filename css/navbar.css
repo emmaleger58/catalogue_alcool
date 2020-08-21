@@ -1,155 +1,139 @@
-fa-2x {
-  font-size: 2em;
+/* Primary Styles */
+.sidenav {
+    height: 100vh; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    /* top: 0;
+    left: 0; */
+    background-color: #26262680; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-fa-1x {
-  font-size: 1.5em;
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #fff;
+    display: block;
+    transition: 0.3s
 }
 
-.fa {
-  position: relative;
-  display: table-cell;
-  width: 60px;
-  height: 60px;
-  margin-top: 5px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 20px;
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+  background: #3c3535;
 }
 
-.main-menu:hover, nav.main-menu.expanded {
-  width: 250px;
-  overflow: visible;
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 36px;
+    margin-left: 50px;
+}
+.closebtn{
+
+  background-color: gold;
+
+
+}
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+    overflow:hidden;
+    width:100%;
+}
+body {
+  overflow-x: hidden;
 }
 
-.main-menu {
-  background: #26262680;
-  border-right: 1px grey solid;
-  position: absolute;
-  /* top: 0;
-  bottom: 0; */
-  height: 100%;
-  /* left: 0; */
-  width: 60px;
-  overflow: hidden;
-  box-shadow: 5px 0px 15px black;
-  -webkit-transition: width .05s linear;
-  transition: width .05s ease-in;
-  -webkit-transform: translateZ(0) scale(1, 1);
-  z-index: 1000;
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: transparent;
+    overflow: hidden;
 }
 
-.main-menu li {
-  position: relative;
-  display: block;
-  width: 250px;
+/* Style the links inside the navigation bar */
+.topnav button {
+    float: left;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .3);
+    border-radius: 5px;
+    background-color: rgba(247, 234, 168, .1);
+    backdrop-filter: blur(5px);
+    display: block;
+    color: gold;
+    text-align: center;
+    margin :20px 20px;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
 }
 
-.logout a {
-  font-size: 18px;
+/* Change the color of links on hover */
+.topnav button:hover {
+    background-color: gold;
+    color: black;
 }
 
-.logout .fa {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-.logout{
-  position: absolute;
-  bottom: 5%;
-}
-.logonav {
-  position: absolute;
-  top: 15%;
-  font-size: 20px;
+/* Add a color to the active/current link */
+.topnav button.active {
+    background-color: #4CAF50;
+    color: white;
 }
 
-.logonav li {
-  padding-top: 30px;
-  padding-bottom: 30px;
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
 
-.main-menu li>a {
-  position: relative;
-  display: table;
-  border-collapse: collapse;
-  border-spacing: 0;
-  color: white;
-  font-family: arial;
-  font-weight: bolder;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-transform: translateZ(0) scale(1, 1);
-  -webkit-transition: all .1s linear;
-  transition: all .1s linear;
+button i{
+  transition:all .5s ease;
+
+  &:hover{
+    #transform:rotate(180deg);
+  }
 }
 
-.main-menu .nav-icon {
-  position: relative;
-  display: table-cell;
-  width: 60px;
-  height: 60px;
-  text-align: center;
-  vertical-align: middle;
-  font-size: 20px;
+#ico{
+  display: none;
 }
 
-.main-menu .nav-text {
-  position: relative;
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
-  width: 190px;
-}
+.menu{
+  background: #000;
+  display: none;
+  padding: 5px;
+  width: 320px;
+  @include border-radius(5px);
 
-.main-menu>ul.logout {
-  position: absolute;
-  /* left: 0;
-  bottom: 0; */
-}
+  #transition: all 0.5s ease;
 
-.no-touch .scrollable.hover {
-  overflow-y: hidden;
-}
+  a{
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 10px 2px;
+    margin: 3px 0;
+    text-decoration: none;
+    background: #444;
 
-.no-touch .scrollable.hover:hover {
-  overflow-y: auto;
-  overflow: visible;
-}
+    &:nth-child(1){
+      margin-top: 0;
+      @include border-radius(3px 3px 0 0 );
+    }
+    &:nth-child(5){
+      margin-bottom: 0;
+      @include border-radius(0 0 3px 3px);
+    }
 
-a:hover, a:focus {
-  text-decoration: none;
-}
-
-nav {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-}
-
-nav ul, nav li {
-  outline: 0;
-  margin: 0;
-  padding: 0;
-}
-
-.area {
-  float: left;
-  background: #262626;
-  width: 100%;
-  height: 100%;
-}
-.stickynav{
-  position: fixed;
-  height: 100%;
-  z-index: 1;
-}
-#logo {
-  background-image: url("../img/kekette.jpg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  max-width: 250px;
-  height: 60px;
+    &:hover{
+      background: #555;
+    }
+  }
 }
