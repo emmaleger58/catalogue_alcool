@@ -6,6 +6,7 @@
 }
 .search-contain{
   position: relative;
+  min-height: 70px;
 }
  .search-bar {
 	 position: absolute;
