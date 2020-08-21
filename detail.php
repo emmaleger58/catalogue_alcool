@@ -2,8 +2,19 @@
 include "include/head.php";
 include "include/navbar.php";
 include "include/config.php";
-;
-// $_GET['id'];
+
+$id = $_GET['id'];
+try {
+$sql = $db->prepare("SELECT id, nom, description, type, taux_alcool, prix, origine, note, image
+                      FROM alcool
+                      WHERE id = $id");
+$sql->execute();
+$rows = $sql->fetchAll();
+} catch(PDOException $e) {
+  echo "connection failed: " . $e->getMessage();
+}
+foreach ($rows as $row) {
+}
  ?>
 
 <link rel="stylesheet" href="css/style.css">
@@ -13,12 +24,10 @@ include "include/config.php";
       <div class="title">
 
 <?php
-      $stmt = $db->prepare("SELECT nom FROM alcool ORDER BY id DESC");
-      $stmt->execute();
-      $catalogue = $stmt->fetchAll();
-      foreach ($catalogue as $row) {
+
+
         echo $row['nom'] . '<br>';
-      }
+
 
 ?>
 
@@ -27,35 +36,24 @@ include "include/config.php";
       <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-12 center">
 
       <?php
-      $stmt = $db->prepare('SELECT image FROM alcool ORDER BY id DESC');
-      $stmt->execute();
-      $catalogue = $stmt->fetchAll();
-      foreach ($catalogue as $row) {
+
         echo "<img class ='img-fluid' src='".$row['image']."' <br>";
-      }
+
 
 ?>
 </div>
 
 <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-12">
   <?php
-      $stmt = $db->prepare("SELECT * FROM alcool ORDER BY id DESC");
-      $stmt->execute();
-      $catalogue = $stmt->fetchAll();
-      foreach ($catalogue as $row) {
-        echo 'Robe : ' . $row['type'] . '<br>';
+
+        echo '<div class="blurred-box-card" Robe : ' . $row['type'] . '<br>';
         echo 'Taux d\'alcool : ' . $row['taux_alcool'] . '%<br>';
         echo 'Origine : ' . $row['origine'] . '<br>';
         echo 'Prix : ' . $row['prix'] . '€<br>';
-        echo 'Note : ' . $row['note'] . '/5<br>';
-      }
+        echo 'Note : ' . $row['note'] . '/5<br></div>';
 
-      $stmt = $db->prepare("SELECT description FROM alcool ORDER BY id DESC");
-      $stmt->execute();
-      $catalogue = $stmt->fetchAll();
-      foreach ($catalogue as $row) {
-        echo '<br>' . $row['description'] . '<br>';
-      }
+        echo '<br><div class="blurred-box-card">' . $row['description'] . '<br> </div>';
+
        ?>
      </div>
 
