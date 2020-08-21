@@ -6,7 +6,7 @@
       <a class="py-4" href="index.php">Accueil</a>
       <a class="py-4" href="beer.php">Nos bières</a>
       <a class="py-4" href="about.php">À propos</a>
-      <a class="py-4" href="#">Contact</a>
+      <a class="py-4" href="contact.php">Contact</a>
       <a class="py-4" href="admin/login.php">Login</a>
       <a class="py-4" href="admin/logout.php">Logout</a>
     </div>
