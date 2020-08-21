@@ -1,3 +1,4 @@
+<<<<<<< HEAD:admin/css/footer.css
 html, body{
   height: 100%;
 }
@@ -62,6 +63,8 @@ z-index: -1;
 
 /*A partir d'ici seulement pour le footer*/
 
+=======
+>>>>>>> 91cf103ee2285eb970d751795e1ee290a38788e4:footer.css
 footer{
   margin-top: 120px;
   background-color: rgba(46, 44, 41, 0.8);
@@ -91,6 +94,10 @@ h5{
   font-family: 'Rochester', cursive;
 }
 
+#contacte{
+
+}
+
 li{
   list-style: none;
 }
@@ -107,5 +114,5 @@ li{
 
 i{
   margin-right:10px;
-  margin-top: ;
+  margin-top: 5px;
 }

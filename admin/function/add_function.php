@@ -1,5 +1,9 @@
 <?php
+<<<<<<< HEAD:admin/function/add_function.php
 include_once '../../include/config.php';
+=======
+include_once 'config.php';
+>>>>>>> 91cf103ee2285eb970d751795e1ee290a38788e4:add_function.php
 
   if(isset($_POST['add'])) {
     $nom = $_POST['nom'];
