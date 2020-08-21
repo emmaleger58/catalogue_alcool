@@ -28,7 +28,6 @@ z-index: -1;
 #box1{
   display: flex;
   justify-content: space-around;
-
 }
 
 #portrait{
@@ -43,8 +42,8 @@ z-index: -1;
 #biographie{
   display: flex;
   border: 2px solid gold;
-  width: 500px;
-  height: 540px;
+  width: 550px;
+  height: 570px;
   margin: 20px;
   overflow: hidden;
 }
@@ -55,6 +54,7 @@ z-index: -1;
 }
 
 #textcontainer{
+  position: absolute;
   display: flex;
   flex-flow: row nowrap;
   box-sizing: content-box;
