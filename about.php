@@ -3,7 +3,7 @@ include "include/head.php";
 include "include/navbar.php";
 include "include/config.php";
  ?>
- <link rel="stylesheet" href="css/main.css">
+
  <link rel="stylesheet" href="css/footer.css">
 </head>
   <body>
