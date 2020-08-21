@@ -1,1 +1,1 @@
-# catalogue alcool
+# catalogue de bières

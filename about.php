@@ -1,10 +1,17 @@
-<?php include 'header_about.php' ?>
+<?php
+include "include/head.php";
+include "include/navbar.php";
+include "include/config.php";
+ ?>
 
+ <link rel="stylesheet" href="css/footer.css">
+ <link rel="stylesheet" href="css/about_style.css">
+</head>
+  <body>
     <div id='container'>
       <h1 id='titre'>À propos</h1>
       <div id='box1'>
         <div id='portrait'>
-          <img src="imgvid/moine.jpg">
         </div>
         <div id='biographie'>
           <div id='vidcontainer'>
@@ -18,4 +25,4 @@
       </div>
     </div>
 <!-- footer.php -->
-<?php include "footer.php"?>
+<?php include "include/footer.php"?>
