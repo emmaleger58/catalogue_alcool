@@ -48,6 +48,7 @@ if (isset($_POST['user'])){
 </div>
 
 <p class="box-register">Vous êtes nouveau ici ? <a href="register.php">S'inscrire</a></p>
+<p> <a href="../index.php">Accueil</a></p>
 <?php if (! empty($message)) { ?>
     <p class="errorMessage"><?php echo $message; ?></p>
 <?php } ?>

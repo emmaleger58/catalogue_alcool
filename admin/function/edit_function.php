@@ -14,7 +14,8 @@ if (isset($_POST['submit'])) {
   $image = $_POST['image'];
 
 try {
-$stmt = $db->prepare("UPDATE alcool SET nom = :nom, description = :description, type = :type, taux_alcool = :taux_alcool, prix = :prix, origine = :origine, note = :note, image = :image WHERE id = 4");
+  $id = $_GET['id'];
+$stmt = $db->prepare("UPDATE alcool SET nom = :nom, description = :description, type = :type, taux_alcool = :taux_alcool, prix = :prix, origine = :origine, note = :note, image = :image WHERE id = $id");
 
 if (!empty($_FILES['new_image']['name'])){
   $filename = $_FILES['new_image']['name'];
@@ -24,7 +25,7 @@ if (!empty($_FILES['new_image']['name'])){
            $valid_extension = array('png','jpg','jpeg','PNG','JPG','JPEG');
            // on vérifie si le fichier a une extension valide
            if (in_array($file_extension,$valid_extension)) {
-             if (move_uploaded_file($_FILES['new_image']['tmp_name'],$target_files)) {
+             if (move_uploaded_file($_FILES['new_image']['tmp_name'],"../".$target_files)) {
              }
            }
          }
@@ -49,11 +50,11 @@ catch(PDOException $e) {
 }
 }
 
-
 try {
+$id = $_GET['id'];
   $sql = $db->prepare("SELECT nom, description, type, taux_alcool, prix, origine, note, image
                         FROM alcool
-                         WHERE id = 1
+                         WHERE id = $id
                         ");
         $sql->execute();
         $texts = $sql->fetchAll();
@@ -64,5 +65,16 @@ try {
 
 foreach ($texts as $text) {
 }
+
+try {
+  $query = $db->prepare("SELECT id,nom
+                        FROM alcool
+                        ");
+        $query->execute();
+        $beers = $query->fetchAll();
+}
+  catch(PDOException $e) {
+    echo "connection failed: " . $e->getMessage();
+  }
  ?>
 </body>
