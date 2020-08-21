@@ -2,6 +2,9 @@
 <link rel="stylesheet" href="css/navbar.css">
 
   <div id="sideNavigation" class="sidenav  d-flex flex-column justify-content-center">
+    <div class="logo align-self-center">
+
+    </div>
       <a href="javascript:void(0)" class="closebtn p-3" onclick="closeNav()">&times;</a>
       <a class="py-4" href="index.php">Accueil</a>
       <a class="py-4" href="beer.php">Nos bières</a>
