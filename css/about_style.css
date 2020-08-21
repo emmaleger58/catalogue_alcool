@@ -73,7 +73,7 @@ z-index: -1;
     box-sizing: border-box;
 } */
 
-/* #textcontainer {
+#textcontainer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -88,7 +88,7 @@ z-index: -1;
 
 #biographie:hover #textcontainer {
   width: 100%;
-} */
+}
 
 
 /*A partir d'ici seulement pour le footer*/
