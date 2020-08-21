@@ -39,13 +39,15 @@ include "include/config.php";
 <link rel="stylesheet" href="css/main.css">
 <link rel="stylesheet" href="css/searchbar.css">
 </head>
-<body>
+<body >
 <video autoplay muted loop id="myVideo">
   <source src="img/BGbeer.mp4" type="video/mp4">
 </video>
 
-<div class="tri blurred-box container py-4 d-flex justify-content-between ">
-  <div class="search-contain container d-flex justify-content-center ">
+<div class="container">
+
+<div class="tri blurred-box container py-4 d-flex justify-content-between flex-column flex-md-row  ">
+  <div class="search-contain container d-flex justify-content-center py-2 ">
     <div class="search-bar ">
       <form action = "" method = "POST">
        <input type = "search" name = "terme" placeholder="Search...">
@@ -53,7 +55,7 @@ include "include/config.php";
      </form>
     </div>
   </div>
-<div class=" container d-flex justify-content-center align-items-center ">
+<div class=" container d-flex justify-content-center align-items-center py-2">
   <form class="form-group" action="" method="post">
   <div class=" container d-flex align-items-center">
       <div class="">
@@ -75,12 +77,12 @@ include "include/config.php";
 
 </div>
 <div class="sectioncard container d-flex flex-column align-items-center pt-5">
-<div class=" container card-deck row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 d-flex justify-content-center " >
+<div class=" container card-deck row row-col-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 d-flex justify-content-center " >
 <?php
 				if($resultats->rowCount()>0){
 					while($d=$resultats->fetch(PDO::FETCH_ASSOC)){
 
-            echo "<div class=' blurred-box-card col mb-4 mx-2'>
+            echo "<div class=' blurred-box-card  mb-4 mx-2'>
                     <a href='detail.php?id=".$d['id']."' class=''>
                     ";
                   echo "<div class='card' >";
@@ -98,8 +100,8 @@ include "include/config.php";
 			?>
     </div>
     </div>
-
-
+</div>
+</body>
   <!-- <script src="main.js" ></script> -->
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

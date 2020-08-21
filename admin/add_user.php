@@ -1,6 +1,8 @@
 
 
 <?php
+include "admin.php";
+include "navadmin.php";
 include "../include/head.php";
 require('../include/config.php');
 

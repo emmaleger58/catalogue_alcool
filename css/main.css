@@ -7,11 +7,6 @@
   z-index: -1;
 }
 
-.deux{
-  background-color: rgba(0,0,0,0.4);
-  font-size: 40px;
-  color: white;
-}
 .card{
   background-color: transparent;
   border: none;
@@ -24,9 +19,6 @@
 }
 body{
   height: 100vh;
-  background: grey;
-  background-repeat: no-repeat;
-  background-size: contain;
 }
 
 .blurred-box-card{

@@ -1,5 +1,7 @@
 
     <?php
+    include "admin.php";
+    include "navadmin.php";
 include_once '../include/config.php';
 include "../include/head.php";
 
