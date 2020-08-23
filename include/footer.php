@@ -11,7 +11,7 @@
         <div class="col-md-3 mt-md-0 mt-3">
 
           <!-- Content -->
-          <h5 id='contacte' class="col-md-12 text-uppercase">Contacte</h5>
+          <h5 id='contacte' class="col-md-12 text-uppercase">Contact</h5>
 
           <div id='info'>
           <ul>
@@ -19,7 +19,7 @@
 
           <li><div id='phone'><i class="fas fa-tty"></i><p>+214 85 662 43</p></div></li>
 
-          <li><div id='mail'><i class="fas fa-envelope"></i><p>brandname@mail.com</p></div></li>
+          <li><div id='mail'><i class="fas fa-envelope"></i><p>CaveKey@gmail.com</p></div></li>
          </ul>
         </div>
         </div>
@@ -33,7 +33,7 @@
           <!-- Links -->
           <h5 class="text-uppercase">Mentions légales</h5>
         <div id='info2'>
-          <p class="text-left">L'abus d'alcool est dangereux pour la santé, à consommer avec modération</p>
+          <p class="text-center">L'abus d'alcool est dangereux pour la santé, à consommer avec modération</p>
         </div>
         </div>
         <!-- Grid column -->
@@ -55,7 +55,7 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
-      <a href="liens vers github">brandname.com</a>
+      <a href="https://github.com/emmaleger58/catalogue_alcool" target="_blank">CaveKey.com</a>
     </div>
     <!-- Copyright -->
 

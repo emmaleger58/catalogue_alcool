@@ -24,6 +24,8 @@ include "include/config.php";
               <h2 id='title2'>"Notre Bière est la votre !"</h2>
               <p>This is some text within a card body.</p>
               <p>And i'm trying to make sure this card is responsive.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae interdum ipsum, nec tincidunt augue. Maecenas nisi nisl, ultricies in dolor sed, bibendum mattis orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ac feugiat dolor. Nam lorem magna, porttitor vel volutpat at, efficitur a justo. Nullam blandit enim eu tristique ullamcorper. Vestibulum aliquet rutrum eros quis mattis.</p>
+              <p>Etiam aliquam lacus facilisis diam mattis, ut consequat diam iaculis. Sed placerat mauris justo, non rhoncus ipsum dapibus eu. Suspendisse at bibendum mauris. Phasellus vitae risus sed lectus luctus pharetra sed vel ante. Cras vel nisi eu lorem aliquam posuere. Nunc libero augue, faucibus a felis a, ultrices porttitor mauris. Sed non turpis bibendum tellus faucibus finibus sit amet a lectus. Suspendisse porttitor dignissim libero, vel convallis felis lacinia ut.</p>
             </div>
            </div>
           </div>
