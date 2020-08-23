@@ -15,7 +15,7 @@
 
           <div id='info'>
           <ul>
-          <li><div id='address'><i class="fas fa-map-marker-alt"></i><p>Germany, Francfort</p></div></li>
+          <li><div id='address'><i class="fas fa-map-marker-alt"></i><p>France, Nevers</p></div></li>
 
           <li><div id='phone'><i class="fas fa-tty"></i><p>+214 85 662 43</p></div></li>
 
