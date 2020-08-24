@@ -46,7 +46,7 @@ include "include/config.php";
 
 <div class="container">
 
-<div class="tri blurred-box container py-4 d-flex justify-content-between flex-column flex-md-row  ">
+<div class="tri blurred-box container py-4 d-flex justify-content-between flex-column flex-md-row">
   <div class="search-contain container d-flex justify-content-center py-2 ">
     <div class="search-bar ">
       <form action = "" method = "POST">
@@ -82,8 +82,8 @@ include "include/config.php";
 				if($resultats->rowCount()>0){
 					while($d=$resultats->fetch(PDO::FETCH_ASSOC)){
 
-            echo "<div class=' blurred-box-card  mb-4 mx-2'>
-                    <a href='detail.php?id=".$d['id']."' class=''>
+            echo "<div class='blurred-box-card mb-4 mx-2'>
+                    <a href='detail.php?id=".$d['id']."' class='test'>
                     ";
                   echo "<div class='card' >";
                     echo "<h5 class='card-title text-center p-2'>".$d['nom']."</h5>";

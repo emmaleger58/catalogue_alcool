@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="css/navbar.css">
 
   <div id="sideNavigation" class="sidenav  d-flex flex-column justify-content-center">
@@ -20,5 +19,6 @@
   <section id='main'>
 
   </section>
+  <script src='navbar.js'></script>
+  
 </body>
-    <script src='navbar.js'></script>

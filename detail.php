@@ -19,7 +19,7 @@ foreach ($rows as $row) {
 
 <link rel="stylesheet" href="css/style.css">
 </head>
-  <body>
+  <body id="small">
     <div class="vertical">
       <div class="title">
 
@@ -52,7 +52,7 @@ foreach ($rows as $row) {
         echo 'Prix : ' . $row['prix'] . '€<br>';
         echo 'Note : ' . $row['note'] . '/5<br></div>';
 
-        echo '<br><div class="blurred-box-card">' . $row['description'] . '<br> </div>';
+        echo '<br><div class="blurred-box-card mb-2">' . $row['description'] . '<br> </div>';
 
        ?>
      </div>
