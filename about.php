@@ -3,8 +3,7 @@ include "include/head.php";
 include "include/navbar.php";
 include "include/config.php";
  ?>
-
- <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@500&display=swap" rel="stylesheet">
+ 
  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="css/footer.css">
