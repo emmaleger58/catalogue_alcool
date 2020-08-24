@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Rochester';
+  src: url('../font/Rochester/Rochester-Regular.ttf');
+}
 #myVideo {
   position: fixed;
   right: 0;
@@ -11,11 +15,12 @@
   background-color: transparent;
   border: none;
   text-decoration: none;
+  font-family: 'Rochester';
   color : black;
 }
 .card-title{
   font-weight: bolder;
-  font-size: 30px;
+  font-size: 50px;
 }
 body{
   height: 100vh;
@@ -49,7 +54,10 @@ a:hover{
   text-decoration: none;
 
 }
-
+select option:hover {
+color: #444645;
+background: #ddd;
+}
 @keyframes bounce {
 	0%, 20%, 60%, 100% {
 		-webkit-transform: translateY(0);

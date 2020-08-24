@@ -4,7 +4,7 @@ include "include/navbar.php";
 include "include/config.php";
 
   try {
-    $tri = $db->prepare("SELECT type
+    $tri = $db->prepare("SELECT *
                           FROM alcool
                           GROUP BY type");
           $tri->execute();
@@ -59,7 +59,7 @@ include "include/config.php";
   <form class="form-group" action="" method="post">
   <div class=" select-beer container d-flex align-items-center">
       <div class="">
-        <select class="form-control" name="type">
+        <select class="beer_select form-control" name="type">
           <option value=''>toutes les bières</option>
             <?php
             foreach ($types as $type) {
@@ -83,7 +83,7 @@ include "include/config.php";
 					while($d=$resultats->fetch(PDO::FETCH_ASSOC)){
 
             echo "<div class=' blurred-box-card  mb-4 mx-2'>
-                    <a href='detail.php?id=".htmlspecialchars($d['id'])."' class=''>
+                    <a href='".htmlspecialchars($d['nom'])."' class=''>
                     ";
                   echo "<div class='card' >";
                     echo "<h5 class='card-title text-center p-2'>".htmlspecialchars($d['nom'])."</h5>";

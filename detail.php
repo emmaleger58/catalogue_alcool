@@ -3,12 +3,12 @@ include "include/head.php";
 include "include/navbar.php";
 include "include/config.php";
 
-$id = $_GET['id'];
+$id = htmlspecialchars($_GET['id']);
 try {
-$sql = $db->prepare("SELECT id, nom, description, type, taux_alcool, prix, origine, note, image
+$sql = $db->prepare("SELECT  *
                       FROM alcool
-                      WHERE id = :id");
-$sql->execute(array(':id' => $id));
+                      WHERE nom = :nom");
+$sql->execute(array(':nom' => $id));
 $rows = $sql->fetchAll();
 } catch(PDOException $e) {
   echo "connection failed: " . $e->getMessage();
