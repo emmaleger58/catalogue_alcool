@@ -70,9 +70,11 @@ body {
 /* Style the links inside the navigation bar */
 .topnav button {
     float: left;
+    position : fixed;
+    z-index:2;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .3);
     border-radius: 5px;
-    background-color: rgba(247, 234, 168, .1);
+    background-color: #26262680;
     backdrop-filter: blur(5px);
     display: block;
     color: gold;

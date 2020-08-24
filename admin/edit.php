@@ -39,8 +39,8 @@
           <p>Description : <textarea name="description" id="descritpion" rows="8" cols="100" ><?php echo  htmlspecialchars($text['description']) ?></textarea>
         </div></p>
         <div class="p-2 container">
-          <p>Image : </p><img class='py-3 ' src='../<?php echo "".$text['image']."" ?>' alt=''>
-            <input type="hidden" name="image" value='<?php echo "".$text['image']."" ?>'>
+          <p>Image : </p><img class='py-3 ' src='../<?php echo "".htmlspecialchars($text['image'])."" ?>' alt=''>
+            <input type="hidden" name="image" value='<?php echo "".htmlspecialchars($text['image'])."" ?>'>
             <input type='file' name='new_image'>
         </div>
         <div class="p-2 container">

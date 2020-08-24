@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
 
 try {
   $id = $_GET['id'];
-$stmt = $db->prepare("UPDATE alcool SET nom = :nom, description = :description, type = :type, taux_alcool = :taux_alcool, prix = :prix, origine = :origine, note = :note, image = :image WHERE id = $id");
+$stmt = $db->prepare("UPDATE alcool SET nom = :nom, description = :description, type = :type, taux_alcool = :taux_alcool, prix = :prix, origine = :origine, note = :note, image = :image WHERE id = :id");
 
 if (!empty($_FILES['new_image']['name'])){
   $filename = $_FILES['new_image']['name'];
@@ -42,6 +42,7 @@ $stmt->execute(array(
   ':origine'=>$origine,
   ':note'=>$note,
   ':image'=>$target_files,
+  ':id' => $id,
 ));
 }
 
@@ -54,9 +55,9 @@ try {
 $id = $_GET['id'];
   $sql = $db->prepare("SELECT nom, description, type, taux_alcool, prix, origine, note, image
                         FROM alcool
-                         WHERE id = $id
+                         WHERE id = :id
                         ");
-        $sql->execute();
+        $sql->execute([':id'=>$id]);
         $texts = $sql->fetchAll();
 }
   catch(PDOException $e) {

@@ -12,6 +12,7 @@ body{
   background-image: url(../images/wood.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  height :100%;
 }
 
 /* DETAIL */
@@ -86,4 +87,19 @@ body{
 
 .jumbotron{
   width: 50%;
+}
+
+.contact-body{
+  height: 100vh;
+  font-family: 'Lora';
+}
+.contact-div{
+  border: 10px ridge #ffbb33;
+}
+.contact-body h1{
+  font-family: "Rochester";
+  font-size: 80px;
+  text-transform: capitalize;
+  color: black;
+
 }

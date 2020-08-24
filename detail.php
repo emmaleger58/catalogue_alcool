@@ -7,8 +7,8 @@ $id = $_GET['id'];
 try {
 $sql = $db->prepare("SELECT id, nom, description, type, taux_alcool, prix, origine, note, image
                       FROM alcool
-                      WHERE id = $id");
-$sql->execute();
+                      WHERE id = :id");
+$sql->execute(array(':id' => $id));
 $rows = $sql->fetchAll();
 } catch(PDOException $e) {
   echo "connection failed: " . $e->getMessage();
@@ -37,7 +37,7 @@ foreach ($rows as $row) {
 
       <?php
 
-        echo "<img class ='img-fluid' src='".$row['image']."' <br>";
+        echo "<img class ='img-fluid' src='".htmlspecialchars($row['image'])."' <br>";
 
 
 ?>
@@ -46,13 +46,13 @@ foreach ($rows as $row) {
 <div class="col-md-6 col-lg-6 col-xl-6 col-sm-12 col-12">
   <?php
 
-        echo '<div class="blurred-box-card" Robe : ' . $row['type'] . '<br>';
-        echo 'Taux d\'alcool : ' . $row['taux_alcool'] . '%<br>';
-        echo 'Origine : ' . $row['origine'] . '<br>';
-        echo 'Prix : ' . $row['prix'] . '€<br>';
-        echo 'Note : ' . $row['note'] . '/5<br></div>';
+        echo '<div class="blurred-box-card" Robe : ' . htmlspecialchars($row['type']) . '<br>';
+        echo 'Taux d\'alcool : ' . htmlspecialchars($row['taux_alcool']) . '%<br>';
+        echo 'Origine : ' . htmlspecialchars($row['origine']) . '<br>';
+        echo 'Prix : ' . htmlspecialchars($row['prix']) . '€<br>';
+        echo 'Note : ' . htmlspecialchars($row['note']) . '/5<br></div>';
 
-        echo '<br><div class="blurred-box-card">' . $row['description'] . '<br> </div>';
+        echo '<br><div class="blurred-box-card">' . htmlspecialchars($row['description']) . '<br> </div>';
 
        ?>
      </div>

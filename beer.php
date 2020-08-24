@@ -63,7 +63,7 @@ include "include/config.php";
           <option value=''>toutes les bières</option>
             <?php
             foreach ($types as $type) {
-                echo "<option value='".$type["type"]."'>".$type["type"]."</option>";
+                echo "<option value='".htmlspecialchars($type["type"])."'>".htmlspecialchars($type["type"])."</option>";
             }
               ?>
         </select>
@@ -83,11 +83,11 @@ include "include/config.php";
 					while($d=$resultats->fetch(PDO::FETCH_ASSOC)){
 
             echo "<div class=' blurred-box-card  mb-4 mx-2'>
-                    <a href='detail.php?id=".$d['id']."' class=''>
+                    <a href='detail.php?id=".htmlspecialchars($d['id'])."' class=''>
                     ";
                   echo "<div class='card' >";
-                    echo "<h5 class='card-title text-center p-2'>".$d['nom']."</h5>";
-                       echo "<img src='".$d['image']."' class='card-img-top p-1' alt='...'>";
+                    echo "<h5 class='card-title text-center p-2'>".htmlspecialchars($d['nom'])."</h5>";
+                       echo "<img src='".htmlspecialchars($d['image'])."' class='card-img-top p-1' alt='...'>";
                echo "</div>
                     </a>
                   </div>";
