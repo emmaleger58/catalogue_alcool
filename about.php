@@ -4,6 +4,7 @@ include "include/navbar.php";
 include "include/config.php";
  ?>
 
+ <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="css/footer.css">
  <link rel="stylesheet" href="css/about_style.css">
@@ -22,10 +23,18 @@ include "include/config.php";
           <div class="card">
             <div class="card-body">
               <h2 id='title2'>"Notre Bière est la votre !"</h2>
-              <p>This is some text within a card body.</p>
-              <p>And i'm trying to make sure this card is responsive.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut vitae interdum ipsum, nec tincidunt augue. Maecenas nisi nisl, ultricies in dolor sed, bibendum mattis orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam ac feugiat dolor. Nam lorem magna, porttitor vel volutpat at, efficitur a justo. Nullam blandit enim eu tristique ullamcorper. Vestibulum aliquet rutrum eros quis mattis.</p>
-              <p>Etiam aliquam lacus facilisis diam mattis, ut consequat diam iaculis. Sed placerat mauris justo, non rhoncus ipsum dapibus eu. Suspendisse at bibendum mauris. Phasellus vitae risus sed lectus luctus pharetra sed vel ante. Cras vel nisi eu lorem aliquam posuere. Nunc libero augue, faucibus a felis a, ultrices porttitor mauris. Sed non turpis bibendum tellus faucibus finibus sit amet a lectus. Suspendisse porttitor dignissim libero, vel convallis felis lacinia ut.</p>
+              <p></p>
+              <p></p>
+              <p>Né en 1780, Théobald D, révolutionna le marché de la bière par son sens du partage.
+              Voulant s'inspirer des Monastères de La
+              Trappe et des idéologies de St Benedict, il décide en 1833 de brasser sa propre bière au profits des plus démunies.
+              Cependant, Lucien P, Evêque de la commune de Dontranc à cette époque, s'oppose fortement au moine bienfaiteur.
+              C'est alors que Theobald P montre son ingéniosité , il décide de vendre son breuvage afin d'en faire partager les profits au Diocèse Dontrainc et aux plus pauvres.
+              C'est alors qu'il se voit autorisé à poursuivre sa missions.</p>
+              <p>"Les bière du Theobald, rebaptisé la "La Cave Key" en 1950 compte aujourd'hui plusieurs recettes de bières, de partenaires, mais aussi de marques.
+              Cependant ses objectifs n'ont pas changer, partager "l'amour de la pinte" et étancher la soif de son prochain.
+              C'est pourquoi La Cave Key offres aujourd'hui 60% de ses revenues à des oeuvres caritatives.
+              La Cave Key; c'est une tradition, une histoire, un partage. </p>
             </div>
            </div>
           </div>

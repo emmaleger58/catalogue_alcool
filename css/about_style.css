@@ -70,6 +70,7 @@ html, body{
     background-color: rgba(107, 107, 107, 0.5);
     text-shadow: 5px 5px 5px black;
     color: white;
+    font-family: 'MedievalSharp', cursive;
 }
 
 h2{
