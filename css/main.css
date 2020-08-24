@@ -27,6 +27,7 @@ body{
     background-color: rgba(247, 234, 168, .1);
     backdrop-filter: blur(5px);
     max-width : 250px;
+    border: 5px ridge rgba(247, 234, 168, .5);
 }
 .blurred-box{
 
@@ -35,4 +36,10 @@ body{
     border-radius: 5px;
     background-color: rgba(247, 234, 168, .1);
     backdrop-filter: blur(5px);
+    border: 5px ridge rgba(247, 234, 168, .5);
+}
+.select-beer .btn{
+
+    background-color: #D4AF37	;
+
 }

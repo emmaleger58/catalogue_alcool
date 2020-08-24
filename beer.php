@@ -57,7 +57,7 @@ include "include/config.php";
   </div>
 <div class=" container d-flex justify-content-center align-items-center py-2">
   <form class="form-group" action="" method="post">
-  <div class=" container d-flex align-items-center">
+  <div class=" select-beer container d-flex align-items-center">
       <div class="">
         <select class="form-control" name="type">
           <option value=''>toutes les bières</option>
@@ -69,7 +69,7 @@ include "include/config.php";
         </select>
       </div>
       <div class="p-2">
-        <input class="btn btn-warning" type="submit" name="submit" value="GO!!">
+        <input class="btn" type="submit" name="submit" value="GO!!">
       </div>
     </form>
   </div>

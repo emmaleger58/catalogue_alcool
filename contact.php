@@ -14,13 +14,12 @@ include "include/navbar.php";
       <h1 class="py-3 px-5">Contact</h1>
     </div>
     <form class="form-row d-flex flex-column align-items-center" action="" method="POST">
-      <div class="d-flex">
-        <div class="p-2">
+
+      <div class="d-flex row">
+        <div class="p-2 col-md-6 col-12 ">
           <input id="nom" class="col" placeholder="Nom" type = "text" name="nom" required pattern="^[A-Za-z '-]+$" maxlength="25">
-
         </div>
-
-        <div class="p-2">
+        <div class="p-2 col-md-6 col-12 ">
           <input id="email" class="col" placeholder="Email" type = "email" name="email" required pattern="^[A-Za-z0-9._%-]+@{1}[A-Za-z0-9.-]+\.{1}[A-Za-z]{2,6}$">
         </div>
       </div>
@@ -31,7 +30,7 @@ include "include/navbar.php";
         </div>
 
         <div class="p-2">
-          <button type="submit" class=" btn btn-warning ">Envoyer</button>
+          <button type="submit" class=" btn">Envoyer</button>
         </div>
     </form>
   </div>
