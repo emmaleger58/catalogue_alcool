@@ -26,7 +26,7 @@ image.addEventListener("mouseleave", function( event ) {
 // video.appendChild(source);
 // video.play();
 //
-// 
+//
 // setTimeout(function() {
 //     video.pause();
 //

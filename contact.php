@@ -6,10 +6,10 @@ include "include/navbar.php";
 ?>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<div class="contact-body container-fluid d-flex align-items-center">
+<div id="contact-body"class="contact-body container-fluid d-flex align-items-center">
 
 
-  <div class="container contact-div blurred-box d-flex flex-column align-items-center text-light p-4 col-lg-6 col-xs">
+  <div id="contact-div" class="container contact-div blurred-box d-flex flex-column align-items-center text-light p-4 col-lg-6 col-xs">
     <div class="">
       <h1 class="py-3 px-5">Contact</h1>
     </div>
@@ -35,6 +35,3 @@ include "include/navbar.php";
     </form>
   </div>
 </div>
-<?php
-
-?>
