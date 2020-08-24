@@ -46,7 +46,7 @@ include "include/config.php";
 
 <div class="container">
 
-<div class="tri blurred-box container py-4 d-flex justify-content-between flex-column flex-md-row  ">
+<div class="tri blurred-box container py-4 d-flex justify-content-between flex-column flex-md-row">
   <div class="search-contain container d-flex justify-content-center py-2 ">
     <div class="search-bar ">
       <form action = "" method = "POST">

@@ -1,10 +1,12 @@
 <?php
 include "include/head.php";
+echo "<div>";
 include "include/navbar.php";
+echo "</div>";
 ?>
 <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body id="body">
 
 <div class="middle">
 
@@ -16,7 +18,9 @@ include "include/navbar.php";
   </div>
 </div>
 
+<div class="">
 
+</div>
 
 
 

@@ -19,7 +19,7 @@ foreach ($rows as $row) {
 
 <link rel="stylesheet" href="css/style.css">
 </head>
-  <body>
+  <body id="small">
     <div class="vertical">
       <div class="title">
 
