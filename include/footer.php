@@ -42,7 +42,8 @@
         <div class="col-md-3 mb-md-0 mb-3">
 
           <!-- Links -->
-          <h5 class="text-uppercase">LOGO</h5>
+
+          <img id='logokey' src='imgvid/keylogo2.svg'>
 
         </div>
         <!-- Grid column -->
