@@ -18,7 +18,9 @@
   font-family: 'Rochester';
   color : black;
 }
-
+.card{
+  height: 372px;
+}
 .container-card-img img{
   max-height: 248px;
 }

@@ -24,56 +24,75 @@ include "include/config.php";
     // On se connecte à là base de données
 
 
-    // On détermine le nombre total d'alcool
-    $sql = 'SELECT COUNT(*) AS nb_beers FROM `alcool`;';
-
-    // On prépare la requête
-    $query = $db->prepare($sql);
-
-    // On exécute
-    $query->execute();
-
-    // On récupère le nombre d'alcool
-    $result = $query->fetch();
-
-    $nbArticles = (int) $result['nb_beers'];
-
-    // On détermine le nombre d'alcool par page
-    $parPage = 6;
-
-    // On calcule le nombre de pages total
-    $pages = ceil($nbArticles / $parPage);
-
-    // Calcul du 1er article de la page
-    $premier = ($currentPage * $parPage) - $parPage;
+    // // On détermine le nombre total d'alcool
+    // $sql = 'SELECT COUNT(*) AS nb_beers FROM alcool';
+    //
+    // // On prépare la requête
+    // $query = $db->prepare($sql);
+    //
+    // // On exécute
+    // $query->execute();
+    //
+    // // On récupère le nombre d'alcool
+    // $result = $query->fetch();
+    //
+    // $nbAlcool = (int) $result['nb_beers'];
+    //
+    // // On détermine le nombre d'alcool par page
+    // $parPage = 6;
+    //
+    // // On calcule le nombre de pages total
+    // $pages = ceil($nbAlcool / $parPage);
+    //
+    // // Calcul du 1er article de la page
+    // $premier = ($currentPage * $parPage) - $parPage;
 
 
 
 
     if(isset($_POST['type'])){
       $type = addcslashes($_POST['type'],'_');
-      $search='SELECT * FROM alcool WHERE type LIKE :type LIMIT :premier, :parpage; ';
-
-      $resultats=$db->prepare($search);
       $type= "%".$type."%";
+      $sql = 'SELECT * FROM alcool WHERE type LIKE :type';
+      $query=$db->prepare($sql);
+      $query->execute([':type'=>$type]);
+      $nbAlcool = $query->rowCount();
+      $parPage = 6;
+      $pages = ceil($nbAlcool / $parPage);
+      $premier = ($currentPage * $parPage) - $parPage;
+      $search='SELECT * FROM alcool WHERE type LIKE :type LIMIT :premier, :parpage; ';
+      $resultats=$db->prepare($search);
       $resultats->bindParam(':type', $type, PDO::PARAM_STR);
       $resultats->bindValue(':premier', $premier, PDO::PARAM_INT);
       $resultats->bindValue(':parpage', $parPage, PDO::PARAM_INT);
       $resultats->execute();
     }
    else if(isset($_POST['terme'])){
-     $nom = addcslashes($_POST['terme'],'_');
-      $search=' SELECT * FROM alcool WHERE nom LIKE :nom LIMIT :premier, :parpage; ';
-
-      $resultats=$db->prepare($search);
+      $nom = addcslashes($_POST['terme'],'_');
       $nom="%".$nom."%";
+      $sql = 'SELECT * FROM alcool WHERE nom LIKE :nom';
+      $query=$db->prepare($sql);
+      $query->execute([':nom'=>$nom]);
+      $nbAlcool = $query->rowCount();
+      $parPage = 6;
+      $pages = ceil($nbAlcool / $parPage);
+      $premier = ($currentPage * $parPage) - $parPage;
+      $search=' SELECT * FROM alcool WHERE nom LIKE :nom LIMIT :premier, :parpage; ';
+      $resultats=$db->prepare($search);
       $resultats->bindParam(':nom', $nom, PDO::PARAM_STR);
       $resultats->bindValue(':premier', $premier, PDO::PARAM_INT);
       $resultats->bindValue(':parpage', $parPage, PDO::PARAM_INT);
       $resultats->execute();
     }
 
-    else {
+  else if(!isset($_POST['type']) && !isset($_POST['terme'])) {
+      $sql = 'SELECT * FROM alcool';
+      $query=$db->prepare($sql);
+      $query->execute();
+      $nbAlcool = $query->rowCount();
+      $parPage = 6;
+      $pages = ceil($nbAlcool / $parPage);
+      $premier = ($currentPage * $parPage) - $parPage;
       $search='SELECT * FROM alcool LIMIT :premier, :parpage; ';
       $resultats=$db->prepare($search);
       $resultats->bindValue(':premier', $premier, PDO::PARAM_INT);
@@ -103,7 +122,7 @@ include "include/config.php";
     </div>
   </div>
 <div class=" container d-flex justify-content-center align-items-center py-2">
-  <form class="form-group" action="" method="post">
+  <form class="form-group" action="beer.php" method="post">
   <div class=" select-beer container d-flex align-items-center">
       <div class="">
         <select class="beer_select form-control" name="type">
@@ -148,6 +167,7 @@ include "include/config.php";
 			?>
     </div>
     <nav>
+
 <ul class="pagination">
     <!-- Lien vers la page précédente (désactivé si on se trouve sur la 1ère page) -->
     <li class="page-item <?php echo ($currentPage == 1) ? "disabled" : "" ?>">
@@ -159,10 +179,12 @@ include "include/config.php";
             <a href="beer.php?page=<?php echo $page ?>" class="page-link"><?php echo $page ?></a>
         </li>
     <?php endfor ?>
+
       <!-- Lien vers la page suivante (désactivé si on se trouve sur la dernière page) -->
       <li class="page-item <?php echo ($currentPage == $pages) ? "disabled" : "" ?>">
         <a href="beer.php?page=<?php echo $currentPage + 1 ?>" class="page-link">Suivante</a>
     </li>
+
 </ul>
 </nav>
     </div>
