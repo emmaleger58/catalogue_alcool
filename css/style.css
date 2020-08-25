@@ -12,7 +12,7 @@ body{
   background-image: url(../images/wood.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 
 }
 
@@ -22,6 +22,7 @@ body{
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  height: 100vh;
 }
 
 .title{
@@ -73,10 +74,11 @@ body{
 
 
 /* INDEX */
-#body{
+/* #body{
   display: grid;
   grid-template-rows: 20% 60% 20%;
-}
+  height : 100%;
+} */
 
 .blurred-box{
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .3);
@@ -101,6 +103,7 @@ body{
   justify-content: center;
   align-items: center;
   z-index: -1;
+  height : 100vh;
 
 }
 

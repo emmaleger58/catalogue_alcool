@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="css/navbar.css">
-
+<body>
   <div id="sideNavigation" class="sidenav  d-flex flex-column justify-content-center">
     <div class="logo align-self-center">
     </div>
@@ -19,10 +19,8 @@
         <i class="fas fa-bars"></i>
       </button>
     </nav>
-<body>
-  <section id='main'>
 
-  </section>
+  <div id='main'>
+
+  </div>
   <script src='navbar.js'></script>
-
-</body>

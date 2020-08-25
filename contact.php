@@ -35,3 +35,4 @@ include "include/navbar.php";
     </form>
   </div>
 </div>
+<?php  include "include/footer.php";?>
