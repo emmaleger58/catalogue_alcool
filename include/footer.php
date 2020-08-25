@@ -39,7 +39,7 @@
         <!-- Grid column -->
 
         <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
+        <div class="d-flex justify-content-center col-lg-3 mb-md-0 mb-6">
 
           <!-- Links -->
 
