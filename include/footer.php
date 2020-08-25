@@ -45,7 +45,7 @@
 
           <!-- Links -->
 
-          <img id='logokey' src='imgvid/keylogo2.svg'>
+          <img id='logokey' src='img/keylogo2.svg'>
 
         </div>
         <!-- Grid column -->

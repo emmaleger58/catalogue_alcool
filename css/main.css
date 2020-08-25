@@ -18,6 +18,14 @@
   font-family: 'Rochester';
   color : black;
 }
+
+.container-card-img img{
+  max-height: 248px;
+}
+.container-card-title{
+  height: 124px;
+  align-items: center;
+}
 .card-title{
   font-weight: bolder;
   font-size: 50px;
@@ -33,6 +41,7 @@ body{
     border-radius: 5px;
     background-color: rgba(247, 234, 168, .1);
     backdrop-filter: blur(5px);
+    min-width: 250px;
     max-width : 250px;
     border: 5px ridge rgba(247, 234, 168, .5);
 }

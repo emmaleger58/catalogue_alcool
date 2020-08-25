@@ -47,7 +47,7 @@ include "include/config.php";
     // Calcul du 1er article de la page
     $premier = ($currentPage * $parPage) - $parPage;
 
-    
+
 
 
     if(isset($_POST['type'])){
@@ -134,8 +134,8 @@ include "include/config.php";
                     <a href='".htmlspecialchars($d['nom'])."' class=''>
                     ";
                   echo "<div class='card' >";
-                    echo "<h5 class='card-title text-center p-2'>".htmlspecialchars($d['nom'])."</h5>";
-                       echo "<img src='".htmlspecialchars($d['image'])."' class='card-img-top img-fluid p-1' alt='...'>";
+                    echo "<div class='container-card-title d-flex align-items-center justify-content-center p-2'><h5 class='card-title text-center p-2'>".htmlspecialchars($d['nom'])."</h5></div>";
+                       echo "<div class='container-card-img d-flex justify-content-center align-items-center'><img src='".htmlspecialchars($d['image'])."' class='w-auto card-img-top img-fluid p-1' alt='...'></div>";
                echo "</div>
                     </a>
                   </div>";
