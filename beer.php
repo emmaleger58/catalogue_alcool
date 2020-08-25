@@ -45,7 +45,7 @@ include "include/config.php";
   <source src="img/BGbeer.mp4" type="video/mp4">
 </video>
 
-<div class="container">
+<div class="container pt-5">
 
 <div class="tri blurred-box container py-4 d-flex justify-content-between flex-column flex-md-row">
   <div class="search-contain container d-flex justify-content-center py-2 ">
@@ -75,8 +75,8 @@ include "include/config.php";
     </form>
   </div>
 </div>
-
 </div>
+
 <div class="sectioncard container d-flex flex-column align-items-center pt-5">
 <div class=" container card-deck row row-col-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 d-flex justify-content-center " >
 <?php

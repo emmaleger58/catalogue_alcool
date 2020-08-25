@@ -20,6 +20,10 @@ foreach ($rows as $row) {
 <link rel="stylesheet" href="css/style.css">
 </head>
   <body id="small">
+    <div class="beer-return p-4">
+      <button class="btn text-dark" type="button" name="button"><a href="<?php echo $_SERVER['HTTP_REFERER']; ?>">Retour aux bières</a></button>
+
+    </div>
     <div class="vertical">
       <div class="title">
 

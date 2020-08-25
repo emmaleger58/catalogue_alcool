@@ -3,7 +3,7 @@ include "include/head.php";
 include "include/navbar.php";
 include "include/config.php";
  ?>
- 
+
  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
  <link rel="stylesheet" href="css/footer.css">
@@ -12,14 +12,14 @@ include "include/config.php";
   <body>
     <div id='container'>
       <video autoplay muted loop id="myVideo">
-        <source id=vidlist src="imgvid/champs.mp4" type="video/mp4">
+        <source id=vidlist src="img/champs.mp4" type="video/mp4">
         <!-- <source src="imgvid/Hops.mp4" type="video/mp4">
         <source src="imgid/Drink.mp4" type="video/mp4">   -->
       </video>
       <h1 id='titre'>À propos</h1>
       <div  class="d-flex row justify-content-center" id='box1'>
         <div class="d-flex col-lg-6 col-12 justify-content-center" id='portrait'>
-          <img class ="img-fluid. max-width:100%" src="imgvid/moine.jpg">
+          <img class ="img-fluid. max-width:100%" src="img/moine.jpg">
         </div>
         <div class="d-flex flex-column align-items-center col-lg-6 col-12"id='biographie'>
           <div class="card">

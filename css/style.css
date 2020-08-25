@@ -9,7 +9,7 @@
 }
 
 body{
-  background-image: url(../images/wood.jpg);
+  background-image: url(../img/wood.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -47,7 +47,18 @@ body{
     display: flex;
     justify-content: center;
 }
+.beer-return{
+  float: right;
 
+}
+.beer-return .btn{
+  background-color: #D4AF37;
+
+}
+.beer-return a{
+  text-decoration: none;
+  color: black;
+}
 @media only screen and (max-width: 767px){
   .vertical{
     height: auto;
