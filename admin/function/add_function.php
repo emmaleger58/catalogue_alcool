@@ -45,6 +45,7 @@ include_once '../../include/config.php';
     }
 
       echo "<font color='green'><br>Boisson ajoutée avec succés !</font>";
+  
     }
   }
 

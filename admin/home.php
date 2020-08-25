@@ -15,7 +15,7 @@
 
     <a href="add_user.php">Add user</a> |
     <a href="add.php">Add beer</a> |
-    <a href="edit.php">Update beer</a> |
+    <a href="editlist.php">Update beer</a> |
     <a href="delete.php">Delete beer</a> |
     <a href="logout.php">Déconnexion</a>
   </div>

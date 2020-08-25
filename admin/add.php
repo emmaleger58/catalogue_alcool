@@ -1,9 +1,10 @@
 
     <?php
     include "admin.php";
+    include "../include/head.php";
     include "navadmin.php";
-include_once '../include/config.php';
-include "../include/head.php";
+    include_once '../include/config.php';
+
 
 
     ?>

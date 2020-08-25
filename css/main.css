@@ -46,11 +46,20 @@ body{
     border: 5px ridge rgba(247, 234, 168, .5);
 }
 .select-beer .btn{
-
     background-color: #D4AF37	;
-
 }
-
+.pagination a{
+  background-color: #D4AF37	!important;
+  text-decoration: none;
+  color: black;
+}
+.pagination a:hover{
+    color:#D4AF37 ;
+    background-color:black	!important;
+}
+.pagination a:active{
+    color:black !important;
+}
 a:hover{
   text-decoration: none;
 

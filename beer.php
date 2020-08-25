@@ -4,7 +4,7 @@ include "include/navbar.php";
 include "include/config.php";
 
   try {
-    $tri = $db->prepare("SELECT *
+    $tri = $db->prepare("SELECT type
                           FROM alcool
                           GROUP BY type");
           $tri->execute();
@@ -16,23 +16,69 @@ include "include/config.php";
     foreach ($types as $type) {
     }
 
-    $search='SELECT * FROM alcool';
-    $params=[];
+    if(isset($_GET['page']) && !empty($_GET['page'])){
+        $currentPage = (int) strip_tags($_GET['page']);
+    }else{
+        $currentPage = 1;
+    }
+    // On se connecte à là base de données
+
+
+    // On détermine le nombre total d'alcool
+    $sql = 'SELECT COUNT(*) AS nb_beers FROM `alcool`;';
+
+    // On prépare la requête
+    $query = $db->prepare($sql);
+
+    // On exécute
+    $query->execute();
+
+    // On récupère le nombre d'alcool
+    $result = $query->fetch();
+
+    $nbArticles = (int) $result['nb_beers'];
+
+    // On détermine le nombre d'alcool par page
+    $parPage = 6;
+
+    // On calcule le nombre de pages total
+    $pages = ceil($nbArticles / $parPage);
+
+    // Calcul du 1er article de la page
+    $premier = ($currentPage * $parPage) - $parPage;
+
+    
+
+
     if(isset($_POST['type'])){
-      $search.=' WHERE type LIKE :type';
-      $params[':type']="%".addcslashes($_POST['type'],'_')."%";
+      $type = addcslashes($_POST['type'],'_');
+      $search='SELECT * FROM alcool WHERE type LIKE :type LIMIT :premier, :parpage; ';
+
       $resultats=$db->prepare($search);
-      $resultats->execute($params);
+      $type= "%".$type."%";
+      $resultats->bindParam(':type', $type, PDO::PARAM_STR);
+      $resultats->bindValue(':premier', $premier, PDO::PARAM_INT);
+      $resultats->bindValue(':parpage', $parPage, PDO::PARAM_INT);
+      $resultats->execute();
     }
-   if(isset($_POST['terme'])){
-      $search.=' WHERE nom LIKE :nom';
-      $params[':nom']="%".addcslashes($_POST['terme'],'_')."%";
+   else if(isset($_POST['terme'])){
+     $nom = addcslashes($_POST['terme'],'_');
+      $search=' SELECT * FROM alcool WHERE nom LIKE :nom LIMIT :premier, :parpage; ';
+
       $resultats=$db->prepare($search);
-      $resultats->execute($params);
+      $nom="%".$nom."%";
+      $resultats->bindParam(':nom', $nom, PDO::PARAM_STR);
+      $resultats->bindValue(':premier', $premier, PDO::PARAM_INT);
+      $resultats->bindValue(':parpage', $parPage, PDO::PARAM_INT);
+      $resultats->execute();
     }
+
     else {
+      $search='SELECT * FROM alcool LIMIT :premier, :parpage; ';
       $resultats=$db->prepare($search);
-      $resultats->execute($params);
+      $resultats->bindValue(':premier', $premier, PDO::PARAM_INT);
+      $resultats->bindValue(':parpage', $parPage, PDO::PARAM_INT);
+      $resultats->execute();
     }
 
 ?>
@@ -75,6 +121,7 @@ include "include/config.php";
     </form>
   </div>
 </div>
+
 </div>
 
 <div class="sectioncard container d-flex flex-column align-items-center pt-5">
@@ -88,7 +135,7 @@ include "include/config.php";
                     ";
                   echo "<div class='card' >";
                     echo "<h5 class='card-title text-center p-2'>".htmlspecialchars($d['nom'])."</h5>";
-                       echo "<img src='".htmlspecialchars($d['image'])."' class='card-img-top p-1' alt='...'>";
+                       echo "<img src='".htmlspecialchars($d['image'])."' class='card-img-top img-fluid p-1' alt='...'>";
                echo "</div>
                     </a>
                   </div>";
@@ -100,6 +147,24 @@ include "include/config.php";
 				$connect=null;}
 			?>
     </div>
+    <nav>
+<ul class="pagination">
+    <!-- Lien vers la page précédente (désactivé si on se trouve sur la 1ère page) -->
+    <li class="page-item <?php echo ($currentPage == 1) ? "disabled" : "" ?>">
+        <a href="beer.php?page=<?php echo $currentPage - 1 ?>" class="page-link">Précédente</a>
+    </li>
+    <?php for($page = 1; $page <= $pages; $page++): ?>
+      <!-- Lien vers chacune des pages (activé si on se trouve sur la page correspondante) -->
+      <li class="page-item <?php echo ($currentPage == $page) ? "active" : "" ?>">
+            <a href="beer.php?page=<?php echo $page ?>" class="page-link"><?php echo $page ?></a>
+        </li>
+    <?php endfor ?>
+      <!-- Lien vers la page suivante (désactivé si on se trouve sur la dernière page) -->
+      <li class="page-item <?php echo ($currentPage == $pages) ? "disabled" : "" ?>">
+        <a href="beer.php?page=<?php echo $currentPage + 1 ?>" class="page-link">Suivante</a>
+    </li>
+</ul>
+</nav>
     </div>
 </div>
 <?php  include "include/footer.php";?>
