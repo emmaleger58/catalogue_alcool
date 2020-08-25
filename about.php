@@ -27,13 +27,13 @@ include "include/config.php";
               <h2 id='title2'>"Notre Bière est la votre !"</h2>
               <p></p>
               <p></p>
-              <p>Né en 1780, Théobald D, révolutionna le marché de la bière par son sens du partage.
+              <p>Né en 1780, Théobald Duramon, révolutionna le marché de la bière par son sens du partage.
               Voulant s'inspirer des Monastères de La
               Trappe et des idéologies de St Benedict, il décide en 1833 de brasser sa propre bière au profits des plus démunies.
-              Cependant, Lucien P, Evêque de la commune de Dontranc à cette époque, s'oppose fortement au moine bienfaiteur.
-              C'est alors que Theobald P montre son ingéniosité , il décide de vendre son breuvage afin d'en faire partager les profits au Diocèse Dontrainc et aux plus pauvres.
+              Cependant, Lucien Paulvesque, Evêque de la commune de Dontranc à cette époque, s'oppose fortement au moine bienfaiteur.
+              C'est alors que Theobald Duramon montre son ingéniosité, il décide de vendre son breuvage afin d'en faire partager les profits au Diocèse Dontrainc et aux plus pauvres.
               C'est alors qu'il se voit autorisé à poursuivre sa missions.</p>
-              <p>"Les bières du Theobald", rebaptisé la "La Cave Key" en 1950 compte aujourd'hui plusieurs recettes de bières, de partenaires, mais aussi de marques.
+              <p>"Les bières du Théobald", rebaptisé la "La Cave Key" en 1950 compte aujourd'hui plusieurs recettes de bières, de partenaires, mais aussi de marques.
               Cependant ses objectifs n'ont pas changer, partager "l'amour de la pinte" et étancher la soif de son prochain.
               C'est pourquoi La Cave Key offres aujourd'hui 60% de ses revenues à des oeuvres caritatives.
               La Cave Key; c'est une tradition, une histoire, un partage. </p>
