@@ -23,7 +23,7 @@ include "include/config.php";
           <div id='bulle'>
           <p>Passer le curseur sur l'image pour en savoir plus</p>
           </div>
-          <img class ="img-fluid. max-width:100%" src="imgvid/moine.jpg">
+          <img class ="img-fluid. max-width:100%" src="img/moine.jpg">
         </div>
         <div class="d-flex flex-column align-items-center col-lg-6 col-12"id='biographie'>
           <div class="card">
