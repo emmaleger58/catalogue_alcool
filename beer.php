@@ -85,7 +85,7 @@ include "include/config.php";
       $resultats->execute();
     }
 
-  else if(!isset($_POST['type']) && !isset($_POST['terme'])) {
+  else  {
       $sql = 'SELECT * FROM alcool';
       $query=$db->prepare($sql);
       $query->execute();
