@@ -2,6 +2,22 @@ html, body{
   height: 100%;
 }
 
+#bulle{
+  display: flex;
+  flex-direction: column;
+  position:absolute;
+  margin: -50px auto 0;
+  background-color: rgba(107, 107, 107, 0.5);
+  text-shadow: 5px 5px 5px black;
+  color: white;
+  font-family: 'Rochester',cursive;
+  border-radius: 120px;
+  font-size: 20px;
+  transition-duration: 1s;
+  opacity: 1;
+  transform: scale(0);
+}
+
 #myVideo {
   position: fixed;
   right: 0;
@@ -27,19 +43,11 @@ html, body{
 }
 
 #box1{
-  /* display: flex;
-  justify-content: space-around; */
-  /* margin-bottom:25px; */
   max-width: 100%;
 }
 
 #portrait{
-  /* display: flex; */
-  /* border: 2px solid blue; */
-  /* width: 340px; */
   height: 500px;
-  /* margin: 15px;
-  margin-left: 20px; */
 }
 
 #portrait img{
@@ -49,15 +57,11 @@ html, body{
 
 #portrait img:hover{
   border-radius: 0px;
-  box-shadow: ;
 }
 
 #biographie{
   position: ;
-  /* border: 2px solid gold; */
-  /* width: 600px; */
   height: 470px;
-  /* margin: 20px; */
   text-align: center;
   opacity: 0;
   transition-duration: 1s;
@@ -72,7 +76,6 @@ html, body{
 /* Texte à côté de l'image du moine */
 
 .card{
-    /* background-color: rgba(0, 0, 255, 0); */
     background-color: rgba(107, 107, 107, 0.5);
     text-shadow: 5px 5px 5px black;
     color: white;
@@ -85,12 +88,4 @@ h2{
     margin-bottom: 35px;
 }
 
-/* Media queries "I HATE THEM WITH A PASSION" */
-/* @media screen and (max-width: 1024px) {
-  #box1{
-
-
-  }
-} */
-
-/*A partir d'ici seulement pour le footer*/
+/*Bulle de dialogue*/
